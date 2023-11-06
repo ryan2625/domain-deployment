@@ -490,7 +490,7 @@ a:hover{
     transform: translate(0);
   }
   50% {
-    transform: translate(-12px, -12px);
+    transform: translate(-14px, -14px);
   }
 }
 
@@ -499,7 +499,7 @@ a:hover{
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-14px);
   }
 }
 
@@ -508,7 +508,7 @@ a:hover{
     transform: translate(0);
   }
   50% {
-    transform: translate(3px, -11px);
+    transform: translate(4px, -15px);
   }
 }
 
