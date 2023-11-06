@@ -33,9 +33,9 @@ $(document).ready(function() {
 
     });
 
-    var img2 = $('<img>').attr('src', "./images/dumbbell.svg")
-    var img3 = $('<img>').attr('src', "./images/glove.svg")
-    var img4 = $('<img>').attr('src', "./images/car.svg")
+    var img2 = $('<img>').attr('src', "./assets/dumbbell.svg")
+    var img3 = $('<img>').attr('src', "./assets/glove.svg")
+    var img4 = $('<img>').attr('src', "./assets/car.svg")
 
     var div1 = $('<div>').attr('id', 'blob');
     var div2 = $('<div>').attr('id', 'blob2');
