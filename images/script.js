@@ -67,6 +67,6 @@ $(document).ready(function() {
         $(".loading").addClass("none");
         console.log("hello");
         $("html").css("overflow-y", "scroll");
-    }, 2000);
+    }, 2200);
 
   });
