@@ -10,7 +10,7 @@ export const data = [
         image : './assets/boxing.webp',
         title : "Cross-City Boxing",
         tech : "Javascript, HTML, CSS",
-        description : "A fully responsive react app created based on a Figma design.",
+        description : "A react app created based on a Figma design.",
         link : "https://cross-city-boxing.vercel.app/",
         github : "https://github.com/ryan2625/cross-city-boxing"},
     {
