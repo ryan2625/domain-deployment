@@ -290,7 +290,7 @@ a:hover{
 }
 
 .descriptions > p{
-  font-size: 15px;
+  font-size: calc(.55vw + 10px);
   font-weight: 800;
 }
 
