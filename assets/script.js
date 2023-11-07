@@ -60,8 +60,6 @@ $(document).ready(function() {
     hiddenElements.forEach(element => {
         observer.observe(element);
     });
-
-    const navElements = document.querySelectorAll(".observer");
     
     setTimeout(() => {
         $(".loading").addClass("none");
