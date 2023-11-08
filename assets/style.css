@@ -510,6 +510,18 @@ a:hover{
   }
 }
 
+@media (max-width: 1590px ){
+  .transform-blob{
+    left: -15%;
+  }
+}
+
+@media (max-width:1280px) {
+  .transform-blob{
+    left: -17%;
+  }
+}
+
 @media (max-width: 1110px){
   .individual{
     flex-direction: column;
