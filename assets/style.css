@@ -228,7 +228,7 @@ a:hover{
 .transform-blob{
   position: absolute;
   top: -40%;
-  left: -23%;
+  left: -18%;
   z-index: -1;
   transform: scale(1.3);
 }
