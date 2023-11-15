@@ -26,7 +26,7 @@ export const data = [
         title : "Nexus Retailers",
         tech : "React, CSS, Javascript, Bootstrap",
         description : "A fully responsive react app created using bootstrap and the Intersection Observer API.",
-        link : "https://simply-ecom.vercel.app/",
+        link : "https://nexus-cars.vercel.app/",
         github : "https://github.com/ryan2625/nexus-Cars"},
     {
         image : './assets/personal.webp',
