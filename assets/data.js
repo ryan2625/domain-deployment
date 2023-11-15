@@ -1,5 +1,13 @@
 export const data = [
     {
+        image : './assets/salesSpherePreview.webp',
+        title : "SalesSphere",
+        tech : "React, CSS",
+        description : "A fully functional ecommerce website complete with many different products and features.",
+        link : "https://simply-ecom.vercel.app/",
+        github : "https://github.com/ryan2625/simply-ecom"
+    },
+    {
         image : './assets/flavors.webp',
         title : "Flavor Store",
         tech : "MERN Stack, CSS, React Bootstrap",
@@ -18,7 +26,7 @@ export const data = [
         title : "Nexus Retailers",
         tech : "React, CSS, Javascript, Bootstrap",
         description : "A fully responsive react app created using bootstrap and the Intersection Observer API.",
-        link : "https://nexus-cars.vercel.app/",
+        link : "https://simply-ecom.vercel.app/",
         github : "https://github.com/ryan2625/nexus-Cars"},
     {
         image : './assets/personal.webp',
