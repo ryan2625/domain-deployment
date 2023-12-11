@@ -329,6 +329,7 @@ a:hover{
 .descriptions > p{
   font-size: calc(.55vw + 10px);
   font-weight: 800;
+  text-align: center;
 }
 
 .buttons{

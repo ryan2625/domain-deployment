@@ -15,11 +15,12 @@ $(document).ready(function () {
         var a1 = $('<a>').attr('href', element.link).text('Live App').attr("target", "_blank");
         var a2 = $('<a>').attr('href', element.github).text('Github').attr("target", "_blank");
         var techDiv = $('<div>').addClass('tech-div');
+        var svgContainer = $('<div>').addClass(element.svgClass);
 
         if (element.svg) {
-            console.log("ASDASD")
-            var svg = $('<img>').attr('src', element.svg).addClass(element.svgClass);
-            divider.append(svg);
+            var svg = $('<img>').attr('src', element.svg)
+            svgContainer.append(svg)
+            divider.append(svgContainer);
         }
 
 
