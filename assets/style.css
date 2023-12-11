@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: 'Krona One', sans-serif;
   color: #111433;
-  background-color: #f2f5fb;
+  background-color: #f9f9f9;
   letter-spacing: 1px;
 }
 
@@ -170,6 +170,23 @@ a:hover{
   z-index: 2;
 }
 
+.top-left{
+  position: absolute;
+  left: -55%;
+  top: -55px;
+  width: 110px;
+  z-index: 20;
+  transform: rotate(-20deg) !important;
+}
+
+.top-right{
+  position: absolute;
+  right: -55%;
+  top: -55px;
+  width: 110px;
+  z-index: 20;
+}
+
 .divider{
   width: 90%;
   height: 6px;
@@ -256,13 +273,17 @@ a:hover{
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: 1rem;
+  background-color: #fbfeff;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 10px;
 }
 
 .individual > *{
   width: 47%;
 }
 
-.individual > img{
+.relative > img{
   object-fit: cover;
   max-width: 100%;
   height: auto;
@@ -276,14 +297,30 @@ a:hover{
   font-family: 'Jost', sans-serif;
 }
 
-.titles > h1{
-  text-wrap: nowrap;
+.tech-div{
+  display: flex;
+  justify-content: center;
 }
 
-.titles > h2{
-  font-size:large;
+.tech-div > p{
+  font-size:20px;
   margin-top: 1.25rem;
+  background-color: white;
+  padding: .5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  width: fit-content;
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: bold;
+  font-family:  Mulish,sans-serif !important;
 }
+
+
+.titles > h1{
+  text-wrap: nowrap;
+  text-align: center;
+}
+
 
 .titles > h3{
   font-size: 13px
@@ -314,11 +351,12 @@ a:hover{
 
 .portfolio-divider{
   width: 50%;
-  height: 10px;
+  height: 5px;
   background-color: #111433;
   border-radius: 5px;
-  margin: 3rem;
+  margin: 1rem;
   align-self: center;
+  position: relative;
 }
 
 .custom-shape-divider-bottom-1699105515 {
@@ -492,6 +530,10 @@ a:hover{
   }
 }
 
+.relative{
+  position: relative;
+}
+
 @keyframes bobbing2 {
   0%, 100% {
     transform: translateY(0);
@@ -534,9 +576,11 @@ a:hover{
     padding: 3rem 1rem;
   }
 
-  .individual > img{
+  .relative{
     min-width: 450px;
   }
+
+
 
   .descriptions{
     min-width: 450px;
@@ -832,3 +876,4 @@ a:hover{
     font-weight: 900;
   }
 }
+
