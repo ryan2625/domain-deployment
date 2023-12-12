@@ -7,7 +7,7 @@ export const data = [
         link : "https://crypto-net-phi.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/bitcoin.svg",
-        svgClass:"top-left"
+        svgClass:"top-right"
     },
     {
         image : './assets/salesSpherePreview.webp',
@@ -24,12 +24,12 @@ export const data = [
             gmail: "demo_fitness@gmail.com",
             password: "demo123$"
         },
-        tech: ["React", "CSS", "Javascript", "Firebase"],
+        tech: ["React", "CSS", "Firebase"],
         description: "A full-stack fitness app that can track your weight, create and log your workouts, and track your calories. This app is responsive and also includes user authentication and supports CRUD operations.",
         link: "https://fitness-dev-2.web.app/",
         github: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
         svg: "./assets/dumbbell.svg",
-        svgClass: "top-right"
+        svgClass: "top-left"
     },
     {
         image : './assets/flavors.webp',
@@ -52,7 +52,7 @@ export const data = [
     {
         image : './assets/nexus.webp',
         title : "Nexus Retailers",
-        tech : ["React", "CSS", "Javascript", "Bootstrap"],
+        tech : ["React", "CSS", "Bootstrap"],
         description : "A fully responsive react app created using bootstrap and the Intersection Observer API.",
         link : "https://nexus-cars.vercel.app/",
         github : "https://github.com/ryan2625/nexus-Cars",

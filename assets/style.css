@@ -172,18 +172,49 @@ a:hover{
 
 .top-left{
   position: absolute;
-  left: -55%;
+  left: -65%;
   top: -55px;
-  width: 110px;
+  width: 90px;
   z-index: 20;
+}
+
+.crypto-verse{
+  animation: bobbing3 3s infinite;
+  width: 90px;
+}
+
+.svg0{
+  transform: rotate(-20deg) !important;
+}
+
+.svg2 {
+  transform: rotate(-40deg) !important;
+}
+
+
+.Nighthawk{
+  animation: bobbing2 3s infinite;
+}
+
+.Cross-City {
+  width: 90px;
+  animation: bobbing1 3s infinite;
+}
+
+.Nexus {
+  width: 90px;
+  animation: bobbing3 3s infinite;
+}
+
+.svg5 {
   transform: rotate(-20deg) !important;
 }
 
 .top-right{
   position: absolute;
-  right: -55%;
+  right: -65%;
   top: -55px;
-  width: 110px;
+  width: 90px;
   z-index: 20;
 }
 
@@ -478,43 +509,6 @@ a:hover{
   position: relative;
 }
 
-#blob{
-  position: absolute;
-  right: -10%;
-  top: -25%;
-  width: 100px;
-  transform: rotate(45deg) !important;
-}
-
-#blob > img{
-  animation: bobbing1 3s infinite;
-}
-
-#blob2{
-  position: absolute;
-  right: 62%;
-  bottom: -65%;
-  animation: bobbing2 3s infinite;
-}
-
-#blob2 > img{
-  width: 100px;
-}
-
-
-#blob4{
-  position: absolute;
-  left: 96%;
-  bottom: -49%;
-  z-index: -1;
-  transform: rotate(-15deg) !important;
-}
-
-#blob4 > img{
-  width: 120px;
-  animation: bobbing3 3s infinite;
-}
-
 #first-li{
   width: 50px;
   background-color:#f2f5fb;
@@ -527,7 +521,7 @@ a:hover{
     transform: translate(0);
   }
   50% {
-    transform: translate(-14px, -14px);
+    transform: translate(0, -14px);
   }
 }
 
@@ -537,19 +531,19 @@ a:hover{
 
 @keyframes bobbing2 {
   0%, 100% {
-    transform: translateY(0);
+    transform:translate(-7px, 7px); 
   }
   50% {
-    transform: translateY(-14px);
+    transform: translate(7px, -7px);
   }
 }
 
 @keyframes bobbing3 {
   0%, 100% {
-    transform: translate(0);
+    transform: translate(0, 13px);
   }
   50% {
-    transform: translate(4px, -15px);
+    transform: translate(6px, -10px);
   }
 }
 
@@ -581,7 +575,13 @@ a:hover{
     min-width: 450px;
   }
 
+  .top-left{
+    left: -90%;
+  }
 
+  .top-right{
+    right: -90%;
+  }
 
   .descriptions{
     min-width: 450px;
@@ -653,24 +653,6 @@ a:hover{
     margin-left: 15rem;
     margin-top: 5rem;
     z-index: 0;
-  }
-
-  #blob{
-    position: absolute;
-    right:-30%;
-    top: -70%;
-    transform: scale(.8);
-    animation: bobbing 3s infinite;
-  }
-  
-  #blob2{
-    right: 74%;
-    bottom: -25%;
-  }
-  
-  #blob4{
-    left: 106%;
-    bottom: -18%;
   }
 
 }
@@ -745,13 +727,7 @@ a:hover{
     min-width: 275px !important;
   }
 
-  .individual > img{
-    min-width: 275px !important;
-  }
 
-  .descriptions{
-    min-width: 275px !important;
-  }
 
   .transform-blob{
     position: absolute;
@@ -809,21 +785,8 @@ a:hover{
     width: 315px;
   }
 
-  #blob{
-    position: absolute;
-    right:-5%;
-    top: -40%;
-    transform: scale(.8);
-    animation: bobbing 3s infinite;
-  }
-  
-  #blob2{
-    bottom: -29%;
-    right: 54%;
-  }
-  
-  #blob4{
-    left: 77%;
+  .top-left, .top-right{
+    display: none;
   }
 
 }
@@ -831,6 +794,29 @@ a:hover{
 @media (max-width: 640px) {
   .transform-blob2{
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .relative{
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .descriptions{
+    min-width: auto;
+  }
+
+  .individual > *{
+    width: 100%;
+  }
+
+  .buttons > a{
+    width: 100px;
+  }
+
+  .descriptions > p{
+    font-size: 15px;
   }
 }
 
@@ -844,10 +830,6 @@ a:hover{
     font-size: 12px;
   }
 
-  .transform-blob{
-    display: none;
-  }
-
   .about-me{
     padding: 1rem;
   }
@@ -855,18 +837,6 @@ a:hover{
   .footer{
     margin: 0 auto;
     margin-left: -.75rem;
-  }
-
-  #blob{
-    display: none;
-  }
-  
-  #blob2{
-    display: none;
-  }
-  
-  #blob4{
-    display: none;
   }
 
 }
