@@ -517,11 +517,54 @@ a:hover{
   position: relative;
 }
 
+.relative{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.transform-blob{
+  position: absolute;
+  z-index: -1;
+  transform: translate(-200px, -200px);
+}
+
+.transform-blob > svg{
+  overflow: visible;
+}
+
+
 #first-li{
   width: 50px;
   background-color:#f2f5fb;
   height: 5px;
   border-radius: 5px;
+}
+
+#first-portfolio {
+  padding: initial;
+  border-radius: initial;
+  width: initial;
+  background-color: initial;
+  color: #f2f5fb;
+  border: initial;
+  cursor: initial;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: initial;
+  text-decoration: initial;
+  text-align: initial;
+  text-decoration: underline;
+}
+
+#first-portfolio:hover{
+  background-color: initial;
+  color: #f2f5fb;
+  border: initial;
+  box-shadow: none; 
+  transform: scale(1.3);
+  transition: initial;
+  cursor: pointer;
 }
 
 @keyframes bobbing1 {
@@ -531,12 +574,6 @@ a:hover{
   50% {
     transform: translate(0, -14px);
   }
-}
-
-.relative{
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 @keyframes bobbing2 {
@@ -556,17 +593,6 @@ a:hover{
     transform: translate(6px, -10px);
   }
 }
-
-.transform-blob{
-  position: absolute;
-  z-index: -1;
-  transform: translate(-200px, -200px);
-}
-
-.transform-blob > svg{
-  overflow: visible;
-}
-
 
 @media (max-width: 1110px){
   .individual{
