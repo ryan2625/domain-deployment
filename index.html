@@ -37,6 +37,18 @@
          <div class="portfolio observer">
             <h1>PORTFOLIO</h1>
             <div class="portfolio-display">
+               <div class="transform-blob">
+                  <svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                     <g transform="translate(239.36391989261813 232.05341360599593)">
+                        <path id="transform1" d=""
+                           fill="#111433"></path>
+                     </g>
+                     <g style="visibility: hidden" transform="translate(221.65231148692845 170.8505316372265)">
+                        <path id="transform2" d="" fill="#111433"></path>
+                     </g>
+                  </svg>
+               </div>
             </div>
          </div>
          <div class="about-me" >
@@ -107,17 +119,24 @@
                </ul>
             </div>
          </div>
-
       </div>
       <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script type="module" src="./assets/script.js"></script>
       <script>
-         const tween = KUTE.fromTo(
+         fetch("../assets/paths.json")
+         .then(response => response.json())
+         .then(paths =>(
+            document.getElementById("transform1").setAttribute("d", paths.path1),
+            document.getElementById("transform2").setAttribute("d",  paths.path2),
+            KUTE.fromTo(
            '#transform1',
            { path: '#transform1' },
            { path: '#transform2' },
            { repeat: 999, duration: 3000, yoyo: true }
          ).start()
+         ))
+
+
          
          const tween2 = KUTE.fromTo(
            '#transform3',
