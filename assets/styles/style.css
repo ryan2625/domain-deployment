@@ -126,8 +126,23 @@ a:hover{
 
 .none{
   opacity: 0;
-  z-index: -9999;
-  transition: .5s all;
+  animation: loader .5s forwards;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  99%{
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+  }
+  
 }
 
 .firstBanner{
