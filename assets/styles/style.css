@@ -69,7 +69,6 @@ a:hover{
   height: 100vh;
   background-color: #222;
   z-index: 9999999;
-  transition: .5s all;
 }
 
 .loader {
