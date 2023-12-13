@@ -99,4 +99,17 @@ $(document).ready(function () {
         $(".mobile-ul").toggleClass("mobile-hidden");
     });
 
+    $(".close, .close-li").on("click", function () {
+        $(".mobile-ul").toggleClass("mobile-hidden");
+    });
+
+    $(".close, .close-li").on("click", function () {
+        $(".mobile-ul").toggleClass("mobile-hidden");
+    });
+
+    $(".to-top").on("click", function () {
+        $("html, body").animate({ scrollTop: 0 })
+    }
+    );
+
 });
