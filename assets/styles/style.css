@@ -169,10 +169,12 @@ label{
   color: #f2f5fb;
   text-decoration: none;
   margin-left: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-container > ul > li > a:hover{
-  color: rgb(17, 20, 51)
+  color: rgb(17, 20, 51);
+  transition: all 0.3s ease-in-out;
 }
 
 .mobile-nav-container{
