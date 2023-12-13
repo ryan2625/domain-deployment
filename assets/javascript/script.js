@@ -72,7 +72,7 @@ $(document).ready(function () {
         $(".loading").addClass("none");
         console.log("Hello fellow developers =)");
         $("html").css("overflow-y", "scroll");
-    }, 1750);
+    }, 1800);
 
     if ($(window).innerWidth() < 768) {
         $(".nav-container").addClass("displayer");
