@@ -288,6 +288,31 @@ label{
   z-index: 2;
 }
 
+.tech-stack{
+  display: flex;
+  gap: 2rem;
+  margin: 5rem 0 6rem 0;
+}
+
+.tech-stack div{
+  display: flex;
+  gap: 2rem;
+}
+
+.tech-stack p{
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.tech-stack img{
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-stack img:hover{
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
 .top-left{
   position: absolute;
   left: -65%;
@@ -857,6 +882,26 @@ label{
 @media(max-width:740px){
   .headings{
     margin-left: 10.7rem;
+  }
+
+  .tech-stack{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tech-images{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-stack p{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tech-images img{
+    width: 50%;
+    max-width: 150px;
   }
 }
 

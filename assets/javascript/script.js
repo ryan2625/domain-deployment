@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     $("#burger").on("click", function () {
         $(".mobile-ul").toggleClass("mobile-hidden");
-    }); 
+    });
 
     $(".close, .close-li").on("click", function () {
         $(".mobile-ul").toggleClass("mobile-hidden");
