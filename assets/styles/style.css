@@ -291,7 +291,7 @@ label{
 .tech-stack{
   display: flex;
   gap: 2rem;
-  margin: 5rem 0 6rem 0;
+  margin: 5rem 0 5rem 0;
 }
 
 .tech-stack div{
