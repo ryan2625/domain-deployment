@@ -4,7 +4,7 @@ export const data = [
         title : "crypto-verse",
         tech : ["React", "SCSS"],
         description : "A crypto app where you can view the latest market data for cryptocurrencies via CoinGecko's API. ",
-        link : "https://crypto-net-phi.vercel.app/",
+        link : "https://crypto-net-ten.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/SVGs/bitcoin.svg",
         svgClass:"top-right"
