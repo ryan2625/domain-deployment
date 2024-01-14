@@ -35,7 +35,7 @@ export const data = [
         image : './assets/images/flavors.webp',
         title : "Flavor Store",
         tech : ["MERN Stack", "CSS"],
-        description : "A fully responsive app that supports CRUD operations and dynamically renders items from the backend. Mindful of SEO and accessibility, this website was made for National Louis University's coding challenge.",
+        description : "A responsive database app that supports CRUD operations and dynamically renders items from the backend. Mindful of SEO and accessibility, this website was made for National Louis University's coding challenge.",
         link : "https://mern-flavor-site.onrender.com/",
         github : "https://github.com/ryan2625/NLU-flavor-app"
     },
