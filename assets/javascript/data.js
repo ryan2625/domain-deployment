@@ -2,8 +2,8 @@ export const data = [
     {
         image : './assets/images/cryptoVerse.webp',
         title : "crypto-verse",
-        tech : ["React", "SCSS"],
-        description : "A crypto app where you can view the latest market data for cryptocurrencies via CoinGecko's API. ",
+        tech : ["SCSS", "MERN Stack"],
+        description : "A full-stack crypto app updated with the latest crypto data through CoinGecko's RESTful API. This app allows user authentication with JWT, supports CRUD operations, and dynamically renders user data from the backend.",
         link : "https://crypto-net-phi.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/SVGs/bitcoin.svg",
