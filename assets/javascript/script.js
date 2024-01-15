@@ -67,13 +67,7 @@ $(document).ready(function () {
     hiddenElements.forEach(element => {
         observer.observe(element);
     });
-
-    setTimeout(() => {
-        $(".loading").addClass("none");
-        console.log("Hello fellow developers =)");
-        $("html").css("overflow-y", "scroll");
-    }, 1800);
-
+    
     if ($(window).innerWidth() < 768) {
         $(".nav-container").addClass("displayer");
         $(".mobile-nav-container").removeClass("displayer");
