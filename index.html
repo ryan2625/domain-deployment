@@ -8,6 +8,39 @@
    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script type="module" src="./assets/javascript/vital.js"></script>
+   <script>
+      fetch("../assets/javascript/paths.json")
+         .then(response => response.json())
+         .then(paths => (
+            document.getElementById("transform1").setAttribute("d", paths.path1),
+            document.getElementById("transform2").setAttribute("d", paths.path2), 
+            document.getElementById("svg5").setAttribute("d", paths.path5),    
+            document.getElementById("svg6").setAttribute("d", paths.path6),  
+            document.getElementById("svg7").setAttribute("d", paths.path7),   
+            document.getElementById("svg8").setAttribute("d", paths.path8),   
+            document.getElementById("svg9").setAttribute("d", paths.path9),   
+            document.getElementById("svg10").setAttribute("d", paths.path10),   
+            KUTE.fromTo(
+               '#transform1',
+               { path: '#transform1' },
+               { path: '#transform2' },
+               { repeat: 999, duration: 3000, yoyo: true }
+            ).start()
+         ))
+
+         fetch("../assets/javascript/paths.json")
+         .then(response => response.json())
+         .then(paths => (
+            document.getElementById("transform3").setAttribute("d", paths.path3),
+            document.getElementById("transform4").setAttribute("d", paths.path4),            
+            KUTE.fromTo(
+               '#transform3',
+               { path: '#transform3' },
+               { path: '#transform4' },
+               { repeat: 999, duration: 3000, yoyo: true }
+            ).start()
+         ))
+   </script>
 </head>
 <body>
    <div class="App">
@@ -214,39 +247,6 @@
          </div>
       </div>
    </div>
-   <script>
-      fetch("../assets/javascript/paths.json")
-         .then(response => response.json())
-         .then(paths => (
-            document.getElementById("transform1").setAttribute("d", paths.path1),
-            document.getElementById("transform2").setAttribute("d", paths.path2), 
-            document.getElementById("svg5").setAttribute("d", paths.path5),    
-            document.getElementById("svg6").setAttribute("d", paths.path6),  
-            document.getElementById("svg7").setAttribute("d", paths.path7),   
-            document.getElementById("svg8").setAttribute("d", paths.path8),   
-            document.getElementById("svg9").setAttribute("d", paths.path9),   
-            document.getElementById("svg10").setAttribute("d", paths.path10),   
-            KUTE.fromTo(
-               '#transform1',
-               { path: '#transform1' },
-               { path: '#transform2' },
-               { repeat: 999, duration: 3000, yoyo: true }
-            ).start()
-         ))
-
-         fetch("../assets/javascript/paths.json")
-         .then(response => response.json())
-         .then(paths => (
-            document.getElementById("transform3").setAttribute("d", paths.path3),
-            document.getElementById("transform4").setAttribute("d", paths.path4),            
-            KUTE.fromTo(
-               '#transform3',
-               { path: '#transform3' },
-               { path: '#transform4' },
-               { repeat: 999, duration: 3000, yoyo: true }
-            ).start()
-         ))
-   </script>
    <script type="module" src="./assets/javascript/script.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
    <script>
