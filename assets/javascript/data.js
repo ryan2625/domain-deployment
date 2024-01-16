@@ -7,7 +7,8 @@ export const data = [
         link : "https://crypto-net-ten.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/SVGs/bitcoin.svg",
-        svgClass:"top-right"
+        svgClass:"top-right",
+        first: true
     },
     {
         image : './assets/images/salesSpherePreview.webp',

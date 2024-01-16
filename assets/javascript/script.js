@@ -23,6 +23,10 @@ $(document).ready(function () {
             divider.append(svgContainer);
         }
 
+        if (element.first === true) {
+            individual.addClass("show")
+        }
+
 
         individual.attr('id', index)
         individualPic.append(img)
