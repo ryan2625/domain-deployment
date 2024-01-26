@@ -3,4 +3,6 @@ SVGs seen on the webpage. I used the javascript library [Kute](https://thednp.gi
 
 Tech used: HTML, JQuery, CSS
 
+Domain purchased via Hostinger.
+
 ![Personal website](./ryan-personal.png)
