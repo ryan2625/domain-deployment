@@ -1,6 +1,7 @@
 export const data = [
     {
         image : './assets/images/cryptoVerse.webp',
+        alt: "The home page of crypto-verse",
         title : "crypto-verse",
         tech : [ "MERN Stack", "SCSS"],
         description : "A full-stack crypto app updated with the latest crypto data through CoinGecko's RESTful API. This app allows user authentication with JWT, supports CRUD operations, and dynamically renders user data from the backend.",
@@ -11,7 +12,8 @@ export const data = [
         first: true
     },
     {
-        image : './assets/images/salesSpherePreview.webp',
+        image : './assets/images/salesSphere.webp',
+        alt: "The home page of SalesSphere",
         title : "SalesSphere",
         tech : ["React", "CSS"],
         description : "A fully functional ecommerce website complete with many different products and features.",
@@ -21,6 +23,7 @@ export const data = [
     {
         image: "./assets/images/nighthawk.webp",
         title: "Nighthawk Fitness",
+        alt: "The home page of Nighthawk FItness",
         demo: {
             gmail: "demo_fitness@gmail.com",
             password: "demo123$"
@@ -35,6 +38,7 @@ export const data = [
     {
         image : './assets/images/flavors.webp',
         title : "Flavor Store",
+        alt: "The home page of Flavor Store",
         tech : ["MERN Stack", "CSS"],
         description : "A responsive database app that supports CRUD operations and dynamically renders items from the backend. Mindful of SEO and accessibility, this website was made for National Louis University's coding challenge.",
         link : "https://mern-flavor-site.onrender.com/",
@@ -43,6 +47,7 @@ export const data = [
     {
         image : './assets/images/boxing.webp',
         title : "Cross-City Boxing",
+        alt: "The home page of Cross-City Boxing",
         tech : ["React", "CSS", "Javascript"],
         description : "A react app created based on a Figma design.",
         link : "https://cross-city-boxing.vercel.app/",
@@ -53,12 +58,14 @@ export const data = [
     {
         image : './assets/images/nexus.webp',
         title : "Nexus Retailers",
+        alt: "The home page of Nexus Retailers",
         tech : ["React", "CSS", "Bootstrap"],
         description : "A fully responsive react app created using bootstrap and the Intersection Observer API.",
         link : "https://nexus-cars.vercel.app/",
         github : "https://github.com/ryan2625/nexus-Cars",
         svg: "./assets/SVGs/car.svg",
-        svgClass: "top-left"
+        svgClass: "top-left",
+        hideBottom: true
     }
    
    /*

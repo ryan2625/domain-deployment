@@ -3,7 +3,7 @@ import { data } from "./data.js";
 $(document).ready(function () {
 
     data.forEach((element, index) => {
-        var img = $('<img>').attr('src', element.image).attr("loading", "lazy")
+        var img = $('<img>').attr('src', element.image).attr("loading", "lazy").attr("alt", element.alt)
         var individual = $('<div>').addClass('individual').addClass("hidden");
         var individualPic = $('<div>').addClass('relative');
         var divider = $('<div>').addClass('portfolio-divider')
@@ -53,7 +53,8 @@ $(document).ready(function () {
         buttons.append(a1)
         buttons.append(a2)
         $(".portfolio-display").append(individual);
-        $(".portfolio-display").append(divider);
+        if (!element.hideBottom){
+        $(".portfolio-display").append(divider);}
     });
 
     const observer = new IntersectionObserver((entries) => {
