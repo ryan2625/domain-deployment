@@ -435,7 +435,7 @@ label{
 }
 
 .individual{
-  margin: 2rem;
+  margin: .5rem;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -465,7 +465,7 @@ label{
   justify-content: space-between;
   font-family: 'Jost', sans-serif;
 }
-
+ual
 .tech-div{
   display: flex;
   justify-content: center;
