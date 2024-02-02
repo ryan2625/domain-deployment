@@ -508,6 +508,10 @@ ual
   width: 100%;
 }
 
+.tech-div {
+  text-align: center;
+}
+
 .buttons > a {
   padding: .65rem 1.2rem;
   border-radius: 20px;
