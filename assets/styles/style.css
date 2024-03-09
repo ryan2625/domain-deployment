@@ -34,11 +34,13 @@ html{
     --black: #fff;   
     --nav-shadow: #ffffff40;
     --mist-purple: #646464;
-    --deep-blue2: #282160;
+    --deep-blue2: #00043e;
     --deep-blue3: #fff;
     --scroll: #fff;
     --button-bg: #fff;
     --button-tx: #000;
+    --prog: #ffffff;
+    --prog2: #ffffff53;
     --track: #000;
   }
 
@@ -55,6 +57,8 @@ html{
     --scroll: #828282;
     --button-bg: #5e6cfd;
     --button-tx: #fff;
+    --prog: #111433;
+    --prog2: #11143353;
     --track: #f9f9f9;
   }
 
@@ -211,6 +215,26 @@ label{
   height: 90px;
   top: 0;
   box-shadow: var(--nav-shadow) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.progress-b {
+  position: fixed;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  top: 85px;
+  background-color:  var(--prog);
+  z-index: 102;
+}
+
+.progress-b::after{
+  content: "";
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  top: 85px;
+  background-color:  var(--prog2);
 }
 
 .nav-container{

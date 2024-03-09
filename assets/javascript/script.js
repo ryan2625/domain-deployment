@@ -113,10 +113,19 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, 100);
     }
     );
+
     var clickSound = document.getElementById("clickSound");
     let themeToggler = document.querySelector("#dark-mode")
+
+    $(window).on("scroll", function() {
+        let currHeight = window.scrollY + $(window).height();
+        let docHeight = $(document).height();
+        let progress = (currHeight - $(window).height())/(docHeight - $(window).height()) * 100;
+        $(".progress-b").width(progress + "%");
+    });
+    
     themeToggler.addEventListener("click", function () {
-        clickSound.play(); 
+        clickSound.play();
         document.body.classList.toggle("dark_mode")
         themeToggler.classList.toggle("rotate-180");
         if (document.body.classList.contains("dark_mode")) {
