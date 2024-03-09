@@ -798,6 +798,7 @@ label{
   z-index:100;
   top: 85px;
   right: 50px;
+  cursor: pointer;
 }
 
 #dark-mode-overlay {
