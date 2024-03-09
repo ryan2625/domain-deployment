@@ -88,6 +88,10 @@ label{
   text-align: center;
 }
 
+.App{
+  overflow: hidden !important;
+}
+
 .loading{
   position: fixed;
   display: flex;
