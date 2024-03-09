@@ -9,6 +9,7 @@
    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script type="module" src="./assets/javascript/vital.js"></script>
 </head>
+
 <body>
    <div class="App">
       <div class="nav">
@@ -66,12 +67,16 @@
             </ul>
          </div>
       </div>
+      <div id="dark-mode">
+         <img src="./assets/images/lever.png" alt="Toggle Dark Mode">
+      </div>
+      <div id="dark-mode-overlay"></div>
       <div class='firstBanner'>
          <div class="loading">
             <div class="loader"></div>
          </div>
          <div class="headings">
-            <img src="./assets/SVGs/blob-haikei (2).svg" aria-label="hidden">
+            <img src="./assets/SVGs/blob-haikei1.svg" aria-label="hidden" id="&-1">
             <div class="intro observer">
                <h2>Hi There, I'm</h2>
                <h1>RYAN FREAS</h1>
@@ -83,15 +88,9 @@
          <div id="portfolio-section" class="custom-shape-divider-top-1698207643">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                preserveAspectRatio="none">
-               <path id="svg10"
-                  d=""
-                  opacity=".25" class="shape-fill"></path>
-               <path id="svg9"
-                  d=""
-                  opacity=".5" class="shape-fill"></path>
-               <path id="svg8"
-                  d=""
-                  class="shape-fill"></path>
+               <path id="svg10" d="" opacity=".25" class="shape-fill"></path>
+               <path id="svg9" d="" opacity=".5" class="shape-fill"></path>
+               <path id="svg8" d="" class="shape-fill"></path>
             </svg>
          </div>
       </div>
@@ -110,11 +109,11 @@
             <div class="transform-blob">
                <svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                  <g transform="translate(239.36391989261813 232.05341360599593)">
-                     <path id="transform1" d="" fill="#111433"></path>
+                  <g transform="translate(239.36391989261813 232.05341360599593)" class="wFill">
+                     <path id="transform1" d="" class="wFillDeep"></path>
                   </g>
                   <g style="visibility: hidden" transform="translate(221.65231148692845 170.8505316372265)">
-                     <path id="transform2" d="" fill="#111433"></path>
+                     <path id="transform2" d="" class="wFillDeep" class="wFill"></path>
                   </g>
                </svg>
             </div>
@@ -124,9 +123,7 @@
          <div class="custom-shape-divider-bottom-1699105515">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                preserveAspectRatio="none">
-               <path id="svg7"
-                  d=""
-                  class="shape-fill"></path>
+               <path id="svg7" d="" class="shape-fill"></path>
             </svg>
          </div>
          <h1 class="observer" id="about-me">About Me</h1>
@@ -134,15 +131,11 @@
             <svg id="visual" viewBox="0 0 300 200" width="300" height="200" xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
                <g transform="translate(139.50532077221357 98.81836577178663)">
-                  <path id="transform3"
-                     d=""
-                     fill="none" stroke="#fff" stroke-width="6">
+                  <path id="transform3" d="" fill="none" stroke-width="6" class="wFillStroke">
                   </path>
                </g>
-               <g style="visibility: hidden" transform="translate(143.26599149794527 93.72309752417073)">
-                  <path id="transform4"
-                     d=""
-                     fill="none" stroke="#fff" stroke-width="6"></path>
+               <g style="visibility: hidden" transform="translate(143.26599149794527 93.72309752417073)" class="wFill">
+                  <path id="transform4" d="" fill="none" stroke-width="6" class="wFillStroke"></path>
                </g>
             </svg>
          </div>
@@ -151,7 +144,8 @@
                Hello! My name is Ryan, and I am an aspiring web developer with a passion for writing dynamic and elegant
                code. I recently graduated from Augustana College with a B.A. in computer science, where I served as the
                treasurer of the Google Developer Student Club. If you would like to see more of my expertise and
-               research, check out my <a id="first-portfolio" href="https://ryan-dev.vercel.app/" target="_blank" aria-label="Navigate to my first portfolio">first
+               research, check out my <a id="first-portfolio" href="https://ryan-dev.vercel.app/" target="_blank"
+                  aria-label="Navigate to my first portfolio">first
                   portfolio.</a>
             </p>
             <p>
@@ -162,7 +156,8 @@
             </p>
          </div>
          <div class="about-pic hidden">
-            <img src="./assets/images/cropper_GDSC.webp" loading="lazy" alt="A picture of Google Developer Student Club at the boat regatta." aria-label="GDSC Picture">
+            <img src="./assets/images/cropper_GDSC.webp" loading="lazy"
+               alt="A picture of Google Developer Student Club at the boat regatta." aria-label="GDSC Picture">
             <label for="GDSC Picture">GDSC Club at the annual "Boat Regatta," 2022</label>
          </div>
          <div class="footer">
@@ -176,13 +171,14 @@
                <li id="first-li">
                </li>
                <li>
-                  <a class="no-style" target="_blank" href="https://linkedin.com/in/ryan-freas" aria-label="Navigate to my Linked in">
-                     <svg class="hover-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0,0,256,256" width="50px" height="50px" aria-label="An SVG of a Linkedin icon">
-                        <g fill="#f2f5fb" >
+                  <a class="no-style" target="_blank" href="https://linkedin.com/in/ryan-freas"
+                     aria-label="Navigate to my Linked in">
+                     <svg class="hover-svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px"
+                        aria-label="An SVG of a Linkedin icon">
+                        <g class="wFill">
                            <g transform="scale(5.12,5.12)">
-                              <path id="svg6"
-                                 d="">
+                              <path id="svg6" d="">
                               </path>
                            </g>
                         </g>
@@ -190,13 +186,14 @@
                   </a>
                </li>
                <li>
-                  <a href="https://github.com/ryan2625" target="_blank" class="no-style" aria-label="Navigate to my github">
-                     <svg class="hover-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0,0,256,256" width="50px" height="50px" aria-label="An SVG of a github icon">
-                        <g fill="#ffffff">
-                           <g transform="scale(5.12,5.12)"> 
-                              <path id="svg5"
-                                 d="">
+                  <a href="https://github.com/ryan2625" target="_blank" class="no-style"
+                     aria-label="Navigate to my github">
+                     <svg class="hover-svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px"
+                        aria-label="An SVG of a github icon">
+                        <g class="wFill">
+                           <g transform="scale(5.12,5.12)">
+                              <path id="svg5" d="">
                               </path>
                            </g>
                         </g>
@@ -207,6 +204,7 @@
          </div>
       </div>
    </div>
+   <audio id="clickSound" src="./assets/sounds/lever-sound.mp3" preload="auto"></audio>
    <script type="module" src="./assets/javascript/script.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
    <script>
@@ -214,13 +212,13 @@
          .then(response => response.json())
          .then(paths => (
             document.getElementById("transform1").setAttribute("d", paths.path1),
-            document.getElementById("transform2").setAttribute("d", paths.path2), 
-            document.getElementById("svg5").setAttribute("d", paths.path5),    
-            document.getElementById("svg6").setAttribute("d", paths.path6),  
-            document.getElementById("svg7").setAttribute("d", paths.path7),   
-            document.getElementById("svg8").setAttribute("d", paths.path8),   
-            document.getElementById("svg9").setAttribute("d", paths.path9),   
-            document.getElementById("svg10").setAttribute("d", paths.path10),   
+            document.getElementById("transform2").setAttribute("d", paths.path2),
+            document.getElementById("svg5").setAttribute("d", paths.path5),
+            document.getElementById("svg6").setAttribute("d", paths.path6),
+            document.getElementById("svg7").setAttribute("d", paths.path7),
+            document.getElementById("svg8").setAttribute("d", paths.path8),
+            document.getElementById("svg9").setAttribute("d", paths.path9),
+            document.getElementById("svg10").setAttribute("d", paths.path10),
             KUTE.fromTo(
                '#transform1',
                { path: '#transform1' },
@@ -229,11 +227,11 @@
             ).start()
          ))
 
-         fetch("../assets/javascript/paths.json")
+      fetch("../assets/javascript/paths.json")
          .then(response => response.json())
          .then(paths => (
             document.getElementById("transform3").setAttribute("d", paths.path3),
-            document.getElementById("transform4").setAttribute("d", paths.path4),            
+            document.getElementById("transform4").setAttribute("d", paths.path4),
             KUTE.fromTo(
                '#transform3',
                { path: '#transform3' },
@@ -247,4 +245,5 @@
    </script>
    <script defer src="/_vercel/insights/script.js"></script>
 </body>
+
 </html>

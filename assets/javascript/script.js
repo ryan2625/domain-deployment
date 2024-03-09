@@ -18,7 +18,9 @@ $(document).ready(function () {
         var svgContainer = $('<div>').addClass(element.svgClass).addClass("svg" + index);
 
         if (element.svg) {
-            var svg = $('<img>').attr('src', element.svg).addClass(element.title)
+            var svg = $('<img>').attr('src', element.svg).addClass(element.title).attr('id', "&" + index);
+
+
             svgContainer.append(svg)
             divider.append(svgContainer);
         }
@@ -53,8 +55,9 @@ $(document).ready(function () {
         buttons.append(a1)
         buttons.append(a2)
         $(".portfolio-display").append(individual);
-        if (!element.hideBottom){
-        $(".portfolio-display").append(divider);}
+        if (!element.hideBottom) {
+            $(".portfolio-display").append(divider);
+        }
     });
 
     const observer = new IntersectionObserver((entries) => {
@@ -72,7 +75,7 @@ $(document).ready(function () {
     hiddenElements.forEach(element => {
         observer.observe(element);
     });
-    
+
     if ($(window).innerWidth() < 768) {
         $(".nav-container").addClass("displayer");
         $(".mobile-nav-container").removeClass("displayer");
@@ -110,5 +113,22 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, 100);
     }
     );
-
+    var clickSound = document.getElementById("clickSound");
+    let themeToggler = document.querySelector("#dark-mode")
+    themeToggler.addEventListener("click", function () {
+        clickSound.play(); 
+        document.body.classList.toggle("dark_mode")
+        themeToggler.classList.toggle("rotate-180");
+        if (document.body.classList.contains("dark_mode")) {
+            document.getElementById("&0").src = "./assets/SVGs/bitcoin2.svg"
+            document.getElementById("&2").src = "./assets/SVGs/dumbbell2.svg"
+            document.getElementById("&4").src = "./assets/SVGs/glove2.svg"
+            document.getElementById("&-1").src = "./assets/SVGs/blob-haikei2.svg"
+        } else {
+            document.getElementById("&0").src = "./assets/SVGs/bitcoin.svg"
+            document.getElementById("&2").src = "./assets/SVGs/dumbbell.svg"
+            document.getElementById("&4").src = "./assets/SVGs/glove.svg"
+            document.getElementById("&-1").src = "./assets/SVGs/blob-haikei1.svg"
+        }
+    })
 });

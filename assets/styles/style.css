@@ -6,32 +6,63 @@ html{
   scroll-behavior: smooth;
 }
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: #828282 #f9f9f9;
+    scrollbar-color: var(--scroll) var(--track);
   }
 
-  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 9px;
   }
 
   *::-webkit-scrollbar-track {
-    background: #f9f9f9;
+    background: var(--track);
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #828282;
+    background-color: var(--scroll);
     border-radius: 10px;
+  }
+
+  /* Please don't judge me for how I wrote the css... I was in a hurry =) */
+
+  .dark_mode{
+    --deep-blue: #f6f6f6; 
+    --near-white: #4e4e4e;   
+    --less-white: #ffffff;   
+    --easy-blue: #000000;    
+    --black: #fff;   
+    --nav-shadow: #ffffff40;
+    --mist-purple: #646464;
+    --deep-blue2: #282160;
+    --deep-blue3: #fff;
+    --scroll: #fff;
+    --button-bg: #fff;
+    --button-tx: #000;
+    --track: #000;
+  }
+
+  :root{
+    --deep-blue: #111433;
+    --near-white: #f9f9f9;
+    --less-white: #f2f5fb;
+    --easy-blue: #5e6cfd;
+    --black: #000;
+    --nav-shadow: #32325d40;
+    --mist-purple: #f9f9f9;
+    --deep-blue2: #111433;
+    --deep-blue3: #111433;
+    --scroll: #828282;
+    --button-bg: #000;
+    --button-tx: #fff;
+    --track: #f9f9f9;
   }
 
 body { 
   margin: 0;
   font-family: 'Krona One', sans-serif;
-  color: #111433;
-  background-color: #f9f9f9;
+  color: var(--deep-blue);
+  background-color: var(--near-white);
   letter-spacing: 1px;
 }
 
@@ -100,6 +131,19 @@ label{
     box-shadow: 0 0 0 0 #fff;
   }
 
+  .wFill{
+    fill: #fff !important;
+  }
+
+  .wFillStroke{
+    stroke: #fff !important;
+    fill: none;
+  }
+
+  .wFillDeep{
+    fill: var(--deep-blue3) !important;
+  }
+
   @keyframes pulsIn {
     0% {
       box-shadow: inset 0 0 0 1rem #fff;
@@ -144,7 +188,7 @@ label{
 }
 
 .firstBanner{
-  background:  rgba(94,108,253,1);
+  background: var(--easy-blue);
   min-height: 65vh;
   position: relative;
   display: flex;
@@ -155,14 +199,14 @@ label{
 
 .nav {
   position: fixed;
-  background-color: rgba(94,108,253,1);
+  background-color: var(--easy-blue);
   z-index: 9999998;
   display: flex;
   align-items: center;
   width: 100%;
   height: 90px;
   top: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: var(--nav-shadow) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .nav-container{
@@ -175,7 +219,7 @@ label{
 }
 
 .nav-container > h1 > a{
-  color: #f2f5fb;
+  color: var(--less-white);
   margin-left: 1rem;
   font-family: Poppins,sans-serif;
   height: fit-content;
@@ -187,14 +231,14 @@ label{
 }
 
 .nav-container > ul > li > a {
-  color: #f2f5fb;
+  color: var(--less-white);
   text-decoration: none;
   margin-left: 1rem;
   transition: all 0.3s ease-in-out;
 }
 
 .nav-container > ul > li > a:hover{
-  color: rgb(17, 20, 51);
+  color: var(--deep-blue);
   transition: all 0.3s ease-in-out;
 }
 
@@ -208,7 +252,7 @@ label{
 }
 
 .mobile-nav-container > h1 > a{
-  color: #f2f5fb;
+  color: var(--less-white);
   margin-left: 1rem;
   font-family: Poppins,sans-serif;
   height: fit-content;
@@ -227,13 +271,13 @@ label{
   top: 0;
   left: -100% !important;
   z-index: 999999999999999999;
-  background-color: #f9f9f9;
+  background-color: var(--near-white);
   transition: all 0.4s ease-in-out;
   gap: 5rem;
 }
 
 .mobile-ul > li > a{
-  color: #111433;
+  color: var(--deep-blue);
   text-decoration: none;
   font-size: 20px;
   font-weight: 900;
@@ -364,7 +408,7 @@ label{
 .divider{
   width: 90%;
   height: 6px;
-  background-color: #111433;
+  background-color: var(--deep-blue);
   position: absolute;
   border-radius: 5px;
   top: 50%;
@@ -383,7 +427,7 @@ label{
 }
 
 .custom-shape-divider-top-1698207643 .shape-fill {
-  fill: #5E6CFD;
+  fill: var(--easy-blue);
 }
 
 .custom-shape-divider-top-1698207643 {
@@ -421,7 +465,7 @@ label{
   content: "";
   width: 100%;
   height: 3px;
-  background-color: #111433;
+  background-color: var(--deep-blue);
   border-radius: 5px;
   left: 0;
   top: 40px;
@@ -440,7 +484,7 @@ label{
   justify-content: space-between;
   position: relative;
   padding: 1rem;
-  background-color: #fbfeff;
+  background-color: var(--mist-purple);
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   border-radius: 10px;
 }
@@ -474,7 +518,7 @@ label{
 .tech-div > p{
   font-size:20px;
   margin-top: 1.25rem;
-  background-color: white;
+  background-color: var(--near-white);
   padding: .5rem;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   width: fit-content;
@@ -512,9 +556,9 @@ label{
   padding: .65rem 1.2rem;
   border-radius: 20px;
   width: 125px;
-  background-color: rgba(94,108,253,1);
-  color: rgb(243, 243, 243);
-  border: #f2f5fb 2px solid;
+  background-color: var(--button-bg);
+  color: var(--button-tx);
+  border: var(--button-tx) 2px solid;
   cursor: pointer;
   font-size: 15px;
   font-weight: 900;
@@ -524,16 +568,16 @@ label{
 }
 
 .buttons > a:hover{
-  background-color: #f2f5fb;
-  color: rgba(94,108,253,1);
-  border: rgba(94,108,253,1) 2px solid;
-  box-shadow: 5px 3px 10px 0px rgba(94,108,253,1);
+  background-color: var(--button-tx);
+  color: var(--button-bg);
+  border: var(--button-bg) 2px solid;
+  box-shadow: 5px 3px 10px 0px var(--button-bg);
   transition: all 0.4s ease-in-out;
 }
 
 .hidden{
   opacity: 0;
-  transition: all 0.4s ease-in-out;
+  transition: opacity .4s ease-in-out;
   transform: translateY(35px);
 }
 
@@ -545,7 +589,7 @@ label{
 .portfolio-divider{
   width: 50%;
   height: 5px;
-  background-color: #111433;
+  background-color: var(--deep-blue);
   border-radius: 5px;
   margin: 1rem;
   align-self: center;
@@ -569,16 +613,16 @@ label{
 }
 
 .custom-shape-divider-bottom-1699105515 .shape-fill {
-  fill: #111433;
+  fill: var(--deep-blue2);
 }
 
 .about-me{
-  background-color: #111433;
+  background-color: var(--deep-blue2);
   position: relative;
   margin-top: 300px;
   display: flex;
   flex-wrap: wrap;
-  color: #f2f5fb;
+  color: var(--less-white);
   justify-content: center;
   font-family: 'Jost', sans-serif;
   gap: 2rem;
@@ -624,7 +668,7 @@ label{
   max-height: 550px;
   margin-bottom: 10rem;
   border-radius: 100px;
-  border: 2px solid white;
+  border: 2px solid var(--near-white);
 }
 
 .footer{
@@ -667,6 +711,11 @@ label{
   transition: .3s all ease-in-out;
 }
 
+.rotate-180{
+  transform: scaleX(-1);
+  right: 51px !important;
+}
+
 #burger{
   width: 60px;
   position: absolute;
@@ -677,7 +726,7 @@ label{
 
 #first-li{
   width: 50px;
-  background-color:#f2f5fb;
+  background-color: var(--less-white);
   height: 5px;
   border-radius: 5px;
 }
@@ -687,7 +736,7 @@ label{
   border-radius: initial;
   width: initial;
   background-color: initial;
-  color: #f2f5fb;
+  color: var(--less-white);
   border: initial;
   cursor: initial;
   font-size: inherit;
@@ -700,7 +749,7 @@ label{
 
 #first-portfolio:hover{
   background-color: initial;
-  color: #f2f5fb;
+  color: var(--less-white);
   border: initial;
   box-shadow: none; 
   transform: scale(1.3);
@@ -712,8 +761,8 @@ label{
   border-radius: 50%;
   width: 427px;
   margin-left: 50%;
-  box-shadow: 0px 0px 40px -10px black;
-  border: 1px solid black;
+  box-shadow: 0px 0px 40px -10px var(--black);
+  border: 1px solid var(--black);
   position: relative;
 }
 
@@ -741,6 +790,34 @@ label{
   }
   50% {
     transform: translate(6px, -10px);
+  }
+}
+
+#dark-mode {
+  position: fixed;
+  z-index:100;
+  top: 85px;
+  right: 50px;
+}
+
+#dark-mode-overlay {
+  position: fixed;
+  top: 45px;
+  right: 100px;
+  width: 1px;
+  height: 1px;
+  border-radius: 20px;
+  animation: glow 1s infinite alternate;
+  z-index: 101; 
+  box-shadow: 10px 0px 60px 20px rgba(255, 255, 255, 0.5); 
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 10px 0px 60px 20px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 10px 0px 100px 50px rgba(255, 255, 255, 0.8); 
   }
 }
 
@@ -798,13 +875,13 @@ label{
     transform: scale(1.2);
     left: -110px;
     top: 23px;
-    color: #f2f5fb;
+    color: var(--less-white);
     z-index: 1;
     margin-left: 2rem;
   }
 
   .divider{
-    background-color:#f2f5fb;
+    background-color:var(--less-white);
   }
 
   .headings{
