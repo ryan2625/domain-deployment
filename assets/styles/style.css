@@ -830,7 +830,7 @@ label{
   }
 
   .portfolio-display{
-    padding: 3rem 1rem;
+    padding: 3rem .25rem;
   }
 
   .relative{
@@ -932,8 +932,13 @@ label{
     margin-left: -2rem;
   }
 
+  .footer > ul {
+    gap: .45rem;
+  }
+
   .about-me > h1{
     margin-bottom: 1rem;
+    font-size: 30px;
   }
 }
 
