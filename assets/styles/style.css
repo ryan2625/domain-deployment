@@ -723,7 +723,7 @@ label{
 #burger{
   width: 60px;
   position: absolute;
-  right: 20px;
+  right: 0px;
   cursor: pointer;
 }
 
