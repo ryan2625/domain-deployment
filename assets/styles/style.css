@@ -740,8 +740,8 @@ label{
 }
 
 .rotate-180{
-  transform: scaleX(-1);
-  right: 51px !important;
+  transform: scaleX(1) !important;
+  right: 50px !important;
 }
 
 #burger{
@@ -824,8 +824,9 @@ label{
 #dark-mode {
   position: fixed;
   z-index:100;
+  transform: scaleX(-1);
+  right: 51px;
   top: 85px;
-  right: 50px;
   cursor: pointer;
 }
 
