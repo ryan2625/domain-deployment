@@ -1,9 +1,11 @@
+
 $(document).ready(function () {
     setTimeout(() => {
         $(".loading").addClass("none");
         console.log("Hello fellow developers =)");
         $("html").css("overflow-y", "scroll");
-    }, 1800);
+    }, 0);
+
     fetch("../assets/javascript/paths.json")
        .then(response => response.json())
        .then(paths => (

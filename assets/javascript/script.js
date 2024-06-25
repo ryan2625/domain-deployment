@@ -19,8 +19,6 @@ $(document).ready(function () {
 
         if (element.svg) {
             var svg = $('<img>').attr('src', element.svg).addClass(element.title).attr('id', "&" + index);
-
-
             svgContainer.append(svg)
             divider.append(svgContainer);
         }
@@ -29,29 +27,21 @@ $(document).ready(function () {
             individual.addClass("show")
         }
 
-
         individual.attr('id', index)
         individualPic.append(img)
-
-
         individual.append(individualPic)
         individual.append(desc)
-
-
-
-
         desc.append(titles)
         desc.append(p)
         desc.append(buttons)
-
         titles.append(h1)
-
+        
         element.tech.forEach((element, index) => {
             var p = $('<p>').text(element);
             techDiv.append(p)
         })
-        titles.append(techDiv)
 
+        titles.append(techDiv)
         buttons.append(a1)
         buttons.append(a2)
         $(".portfolio-display").append(individual);

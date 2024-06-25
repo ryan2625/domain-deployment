@@ -35,6 +35,7 @@ export const data = [
         svg: "./assets/SVGs/dumbbell.svg",
         svgClass: "top-left"
     },
+    /*
     {
         image : './assets/images/flavors.webp',
         title : "Flavor Store",
@@ -44,6 +45,7 @@ export const data = [
         link : "https://mern-flavor-site.onrender.com/",
         github : "https://github.com/ryan2625/NLU-flavor-app"
     },
+  
     {
         image : './assets/images/boxing.webp',
         title : "Cross-City Boxing",
@@ -68,7 +70,6 @@ export const data = [
         hideBottom: true
     }
    
-   /*
     {
         image : './assets/personal.webp',
         title : "Personal Website",

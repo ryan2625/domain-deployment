@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan-Dev</title>
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+</head>
+<body>
+    <div class="App nav">
+        <div class="nav-container">
+           <h1>
+              <a class="to-top" aria-label="Ryan-dev Logo" onClick="fetchPage()">
+                 Ryan-Dev
+              </a>
+           </h1>
+        </div>
+     </div>
+</body>
+<script>
+    function fetchPage() {
+        fetch("index.html")
+        .then(html => html.text())
+        .then(html2 => document.querySelector('.App').innerHTML = html2)
+    }
+    data = [
+        {
+            tags: ["jQuery", "React", "Web Scraping", "ASP.NET", "Research", "TypeScript", "Python", "React Native", "Batchfile", "Node", "Java", "HTML", "MongoDB", "Api"]
+        },
+        {
+            name: "crypto-verse",
+            tags: ["React", "Node", "TypeScript", "MongoDB", "API"]
+        },
+        {
+            name: "Sales-Sphere",
+            tags: ["React"]
+        },
+        {
+            name: "Nighthawk Fitness",
+            tags: ["React"]
+        },
+        {
+            name: "Parser.io",
+            tags: ["Python", "jQuery"]
+        },
+    ]
+</script>
+</html>

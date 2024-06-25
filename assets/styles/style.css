@@ -794,6 +794,11 @@ label{
   position: relative;
 }
 
+#portfolio-nav {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @keyframes bobbing1 {
   0%, 100% {
     transform: translate(0);
