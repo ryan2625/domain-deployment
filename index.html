@@ -240,6 +240,11 @@
                { repeat: 999, duration: 3000, yoyo: true }
             ).start()
          ))
+      function fetchPage() {
+        fetch("portfolio.html")
+        .then(html => html.text())
+        .then(html2 => document.querySelector('.App').innerHTML = html2)
+    }
    </script>
    <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

@@ -1,48 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan-Dev</title>
     <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="./assets/javascript/vital.js"></script>
+    <style>
+        .App {
+            width: 100%;
+        }
+
+        h2 {
+            font-family: 'Krona One', sans-serif !important
+        }
+
+        h3 {
+            margin: .2rem;
+        }
+
+        p {
+            margin: .2rem
+        }
+
+        .App > * {
+            font-family: 'Jost', sans-serif
+        }
+
+        .nav-container { 
+            max-width: none;
+        }
+
+        .bodi {
+            margin-top: 130px;
+            text-align: center;
+        }
+
+        .proj-grid {
+            display: flex;
+            padding: 1.5rem;
+        }
+
+        .proj {
+            display: flex;
+            gap: .5rem
+        }
+
+        .notag {
+            align-self: flex-start;
+        }
+
+        .desc {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            max-width: 250px;
+        }
+
+        .desc > h3 {
+            font-size: 14px;
+        }
+
+        .ps {
+            font-size: 11px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .proj>img {
+            width: 130px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="App nav">
-        <div class="nav-container">
-           <h1>
-              <a class="to-top" aria-label="Ryan-dev Logo" onClick="fetchPage()">
-                 Ryan-Dev
-              </a>
-           </h1>
+    <div class="App">
+        <div class="nav">
+            <div class="nav-container nav">
+                <h1>
+                    <a class="to-top" aria-label="Ryan-dev Logo" onClick="fetchPage()">
+                        Ryan-Dev
+                    </a>
+                </h1>
+            </div>
         </div>
-     </div>
+        <div class="bodi">
+            <h2>All projects</h2>
+            <div class="filter">
+                FILTERS
+            </div>
+            <div class="proj-grid">
+                <div class="proj">
+                    <img src="./assets/images/boxing.webp" />
+                    <div class="desc">
+                        <h3>The title</h3>
+                        <div class="ps">
+                        <p class="notag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem est libero dolor maiores!</p>
+                        <p class="tag">Tags: HTML, React, ASDASD</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
+    $(document).ready(function () {
+
+    })
     function fetchPage() {
         fetch("index.html")
-        .then(html => html.text())
-        .then(html2 => document.querySelector('.App').innerHTML = html2)
+            .then(html => html.text())
+            .then(html2 => document.querySelector('.App').innerHTML = html2)
     }
     data = [
         {
-            tags: ["jQuery", "React", "Web Scraping", "ASP.NET", "Research", "TypeScript", "Python", "React Native", "Batchfile", "Node", "Java", "HTML", "MongoDB", "Api"]
+            tags: ["SASS", "jQuery", "React", "Web Scraping", "ASP.NET", "Research", "TypeScript", "Python", "React Native", "Batchfile", "Node", "Java", "HTML", "MongoDB", "Api", "SQL", "ASP.NET", "C#", "CSS", "Java"]
         },
         {
             name: "crypto-verse",
-            tags: ["React", "Node", "TypeScript", "MongoDB", "API"]
+            tags: ["React", "Node", "TypeScript", "MongoDB", "API", "HTML", "CSS", "SASS"]
         },
         {
             name: "Sales-Sphere",
-            tags: ["React"]
+            tags: ["React", "HTML", "CSS"]
         },
         {
             name: "Nighthawk Fitness",
-            tags: ["React"]
+            tags: ["React", "HTML", "CSS"]
         },
         {
             name: "Parser.io",
-            tags: ["Python", "jQuery"]
+            tags: ["Python", "jQuery", "HTML", "CSS"]
+        },
+        {
+            name: "ryan-dev.com",
+            tags: ["jQuery", "HTML", "CSS"]
+        },
+        {
+            name: "First Portfolio",
+            tags: ["jQuery", "HTML", "CSS"]
+        },
+        {
+            name: "Trademark-Crawler",
+            tags: ["Python"]
+        },
+        {
+            name: "EncoreTix",
+            tags: ["React Native", "Expo Go", "CSS"]
+        },
+        {
+            name: "NLU Flavor App",
+            tags: ["React", "MongoDB", "Node", "Express", "CSS"]
+        },
+        {
+            name: "Folder-Relocator",
+            tags: ["React", "MongoDB", "Node", "Express"]
+        },
+        {
+            name: "SQL-call-finder",
+            tags: ["Python", "SQL", "C#"]
+        },
+        {
+            name: ".NOTED",
+            tags: ["ASP.NET", "C#", "CSS"]
+        },
+        {
+            name: "HTML Email Development",
+            tags: ["HTML", "CSS"]
+        },
+        {
+            name: "Nexus Cars",
+            tags: ["HTML", "CSS", "React"]
+        },
+        {
+            name: "Schedulizer",
+            tags: ["Java"]
+        },
+        {
+            name: "A Study on Superclustering Methods for Optical Mouse Trajectories",
+            tags: ["Research"]
+        },
+        {
+            name: "Cyber Security: An Analysis on Network Attacks",
+            tags: ["Research"]
+        },
+        {
+            name: "An Investigation on Security Vulnerabilities in Different WiFi Protocols",
+            tags: ["Research"]
         },
     ]
 </script>
+
 </html>
