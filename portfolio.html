@@ -11,6 +11,8 @@
     <style>
         .App {
             width: 100%;
+            height: 500vh;
+            background-color: #f9f9f9;
         }
 
         h2 {
@@ -25,11 +27,11 @@
             margin: .2rem
         }
 
-        .App > * {
+        .App>* {
             font-family: 'Jost', sans-serif
         }
 
-        .nav-container { 
+        .nav-container {
             max-width: none;
         }
 
@@ -41,11 +43,17 @@
         .proj-grid {
             display: flex;
             padding: 1.5rem;
+
         }
 
         .proj {
             display: flex;
-            gap: .5rem
+            gap: .5rem;
+            background-color: #5e6cfd;
+            flex-direction: column;
+            max-width: 250px;
+            position: relative;
+
         }
 
         .notag {
@@ -57,9 +65,10 @@
             flex-direction: column;
             text-align: left;
             max-width: 250px;
+            padding: 5px;
         }
 
-        .desc > h3 {
+        .desc>h3 {
             font-size: 14px;
         }
 
@@ -69,12 +78,90 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+            box-sizing: content-box;
+            position: relative;
         }
 
-        .proj>img {
-            width: 130px;
-            aspect-ratio: 1/1;
+        .img-cont {
+            position: relative;
+        }
+
+        .img-cont>img {
+            width: 100%;
+            aspect-ratio: 2/1;
             object-fit: cover;
+        }
+
+        .image-bot {
+            position: absolute;
+            bottom: 0;
+            width: calc(100% + 10px);
+            transform: translate(-5px, 100%);
+        }
+
+        .img-cont>h3 {
+            color: #f9f9f9;
+            position: absolute;
+            backdrop-filter: blur(3px);
+            background-color: #000000a1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circ1 {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: aqua;
+            left: 0;
+        }
+        .circ2 {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background-color: rgb(36, 42, 42);
+            left: 0;
+        }
+        .circ3 {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: rgb(90, 158, 158);
+            left: 0;
+        }
+        .circ4 {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: aqua;
+            left: 0;
+        }
+        .circ5 {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background-color: rgb(36, 42, 42);
+            left: 0;
+        }
+        .circ6 {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: rgb(90, 158, 158);
+            left: 0;
         }
     </style>
 </head>
@@ -97,13 +184,21 @@
             </div>
             <div class="proj-grid">
                 <div class="proj">
-                    <img src="./assets/images/boxing.webp" />
-                    <div class="desc">
+                    <div class="img-cont">
+                        <div class="circ1"></div>
+                        <div class="circ2"></div>
+                        <div class="circ3"></div>
                         <h3>The title</h3>
-                        <div class="ps">
-                        <p class="notag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem est libero dolor maiores!</p>
-                        <p class="tag">Tags: HTML, React, ASDASD</p>
+                        <img src="./assets/images/boxing.webp" />
                     </div>
+                    <div class="desc">
+                        <div class="ps">
+                            <p class="notag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem
+                                est libero dolor maiores!</p>
+                            <div class="diver">asd</div>
+                            <p class="tag">Tags: HTML, React, ASDASD</p>
+                            <img class="image-bot" src="./assets/images/gg22.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
