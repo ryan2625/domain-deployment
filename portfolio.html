@@ -16,11 +16,14 @@
         }
 
         h2 {
-            font-family: 'Krona One', sans-serif !important
+            font-family: 'Krona One', sans-serif !important;
+            color: black;
         }
 
         h3 {
             margin: .2rem;
+            padding: .2rem .75rem;
+            border-radius: 30px;
         }
 
         p {
@@ -28,7 +31,8 @@
         }
 
         .App>* {
-            font-family: 'Jost', sans-serif
+            font-family: 'Jost', sans-serif;
+            color: #f9f9f9;
         }
 
         .nav-container {
@@ -48,16 +52,17 @@
 
         .proj {
             display: flex;
-            gap: .5rem;
             background-color: #5e6cfd;
             flex-direction: column;
             max-width: 250px;
             position: relative;
+            border-radius: 10px 10px 0px 0px;
 
         }
 
         .notag {
             align-self: flex-start;
+
         }
 
         .desc {
@@ -66,10 +71,15 @@
             text-align: left;
             max-width: 250px;
             padding: 5px;
+            margin-top: -10px;
         }
 
         .desc>h3 {
             font-size: 14px;
+        }
+
+        .tag {
+            margin-bottom: 10px;
         }
 
         .ps {
@@ -90,6 +100,7 @@
             width: 100%;
             aspect-ratio: 2/1;
             object-fit: cover;
+            border-radius: 10px 10px 0px 0px;
         }
 
         .image-bot {
@@ -195,8 +206,12 @@
                         <div class="ps">
                             <p class="notag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem
                                 est libero dolor maiores!</p>
-                            <div class="diver">asd</div>
+                            <div class="diver"></div>
                             <p class="tag">Tags: HTML, React, ASDASD</p>
+                            <div class="btnz">
+                                <a href="">Live App</a>
+                                <a href="">Github</a>
+                            </div>
                             <img class="image-bot" src="./assets/images/gg22.jpg" alt="">
                         </div>
                     </div>
