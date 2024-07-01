@@ -20,18 +20,13 @@
             color: black;
         }
 
-        h3 {
-            margin: .2rem;
-            padding: .2rem .75rem;
-            border-radius: 30px;
-        }
-
         p {
             margin: .2rem
         }
 
         .App>* {
             font-family: 'Jost', sans-serif;
+            font-weight: 600;
             color: #f9f9f9;
         }
 
@@ -46,7 +41,7 @@
 
         .proj-grid {
             display: flex;
-            padding: 1.5rem;
+            padding: 1.65rem;
 
         }
 
@@ -54,7 +49,7 @@
             display: flex;
             background-color: #5e6cfd;
             flex-direction: column;
-            max-width: 250px;
+            max-width: 300px;
             position: relative;
             border-radius: 10px 10px 0px 0px;
 
@@ -69,31 +64,57 @@
             display: flex;
             flex-direction: column;
             text-align: left;
-            max-width: 250px;
+            max-width: 100%;
             padding: 5px;
-            margin-top: -10px;
-        }
-
-        .desc>h3 {
-            font-size: 14px;
+            margin-top: -5px;
+            text-align: center;
         }
 
         .tag {
-            margin-bottom: 10px;
+            margin: 20px 0 20px 0;
+            font-size: 15px;
+            position: relative;
+            text-align: center;
+        }
+
+        .tag::after{
+            position: absolute;
+            content: "";
+            width: 85%;
+            height: 2px;
+            border-radius:20px ;
+            bottom: -18px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00043e97;
+        }
+
+        .tag::before{
+            position: absolute;
+            content: "";
+            width: 85%;
+            height: 2px;
+            border-radius:20px ;
+            top: -13px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00043e97;
         }
 
         .ps {
-            font-size: 11px;
+            font-size: 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+            width: 100%;
             box-sizing: content-box;
             position: relative;
         }
 
         .img-cont {
             position: relative;
+            z-index: 99;
         }
 
         .img-cont>img {
@@ -101,6 +122,8 @@
             aspect-ratio: 2/1;
             object-fit: cover;
             border-radius: 10px 10px 0px 0px;
+            position: relative;
+            z-index: 9;
         }
 
         .image-bot {
@@ -114,38 +137,47 @@
             color: #f9f9f9;
             position: absolute;
             backdrop-filter: blur(3px);
-            background-color: #000000a1;
+            background-color: #000000b1;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 99999;
+            font-size: 30px;
+            margin: .2rem;
+            padding: .5rem 1rem;
+            border-radius: 15px;
         }
 
         .circ1 {
             content: "";
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 100%;
-            background-color: aqua;
-            left: 0;
+            background: linear-gradient(180deg, rgba(0,4,62,1) 0%, rgba(94,108,253,1) 85%);
+            left: -25px;
+            top: -25px;
+            z-index: 0;
         }
         .circ2 {
             content: "";
             position: absolute;
-            width: 25px;
-            height: 25px;
+            width: 17px;
+            height: 17px;
             border-radius: 100%;
-            background-color: rgb(36, 42, 42);
-            left: 0;
+            background: linear-gradient(270deg, rgba(0,4,62,1) 0%, rgba(94,108,253,1) 85%);
+            left: 5px;
+            top: -47px;
         }
         .circ3 {
             content: "";
             position: absolute;
-            width: 35px;
-            height: 35px;
+            width: 28px;
+            height: 28px;
             border-radius: 100%;
-            background-color: rgb(90, 158, 158);
-            left: 0;
+            background: linear-gradient(0deg, rgba(0,4,62,1) 0%, rgba(94,108,253,1) 85%);
+            left: 30px;
+            top: -41px;
         }
         .circ4 {
             content: "";
@@ -153,7 +185,7 @@
             width: 50px;
             height: 50px;
             border-radius: 100%;
-            background-color: aqua;
+            background: linear-gradient(0deg, rgba(0,4,62,1) 0%, rgba(94,108,253,1) 85%);
             left: 0;
         }
         .circ5 {
@@ -162,7 +194,7 @@
             width: 25px;
             height: 25px;
             border-radius: 100%;
-            background-color: rgb(36, 42, 42);
+            background: linear-gradient(0deg, #00043e 0%, rgba(94,108,253,1) 85%);
             left: 0;
         }
         .circ6 {
@@ -171,8 +203,22 @@
             width: 35px;
             height: 35px;
             border-radius: 100%;
-            background-color: rgb(90, 158, 158);
+            background: linear-gradient(0deg, rgba(0,4,62,1) 0%, rgba(94,108,253,1) 85%);
             left: 0;
+        }
+
+        .btnz {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 15px 0px 10px 0;
+        }
+
+        .btnz > *{
+            background-color: #00043e;
+            color: #f9f9f9;
+            text-decoration: none;
+            padding: 5px 10px;
         }
     </style>
 </head>
@@ -212,7 +258,7 @@
                                 <a href="">Live App</a>
                                 <a href="">Github</a>
                             </div>
-                            <img class="image-bot" src="./assets/images/gg22.jpg" alt="">
+                            <img class="image-bot" src="./assets/images/g21.jpg" alt="">
                         </div>
                     </div>
                 </div>
