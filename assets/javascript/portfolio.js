@@ -58,7 +58,7 @@ $(document).ready(function () {
         },
         {
             name: "EncoreTix",
-            tags: ["React Native", "Expo Go", "CSS", "HTML", "Node"],
+            tags: ["React Native", "Expo Go", "CSS", "HTML", "Node", "API"],
             description: "A React Native app that integrates the Discovery API to show the latest concerts based on the user's search criteria. ",
             app: "None",
             gith: "https://github.com/ryan2625/EncoreTix",
