@@ -51,7 +51,7 @@ $(document).ready(function () {
         {
             name: "Trademark-Crawler",
             tags: ["Python"],
-            description: "A Python webscraper that will find individuals using certain trademarks.",
+            description: "A Python web scraper that will find individuals using certain trademarks.",
             app: "None",
             gith: "https://github.com/ryan2625/Trademark-Crawler",
             image: "./assets/individual-proj-images/crawler.webp"

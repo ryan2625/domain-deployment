@@ -10,8 +10,6 @@
     <style>
         html {
             overflow-y: auto !important;
-            overflow-x: hidden !important; 
-
         }
 
         h1 {
@@ -53,13 +51,14 @@
             color: #f9f9f9;
         }
 
-        .nav-container {
-            max-width: none;
+        .nav {
+            max-width: 100vw;
         }
-
         .bodi {
             margin-top: 130px;
             text-align: center;
+            overflow-x: hidden !important; 
+            position: relative;
         }
 
         .proj-grid {
@@ -354,12 +353,12 @@
         </div>
         <div class="bodi">
             <h2>All projects</h2>
+            <div class="ring"></div>
             <div class="filter">Filter by:
                 <select name="Tags" id="Tags">
                     <option value="None">Default</option>
                 </select>
             </div>
-            <div class="ring"></div>
             <div class="proj-grid">
             </div>
         </div>
