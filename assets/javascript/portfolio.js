@@ -33,6 +33,14 @@ $(document).ready(function () {
             image: "./assets/individual-proj-images/parserio.webp"
         },
         {
+            name: "404 Finder",
+            tags: ["Python"],
+            description: "A web crawler designed to efficiently search for broken links given a list of URLs. Can be configured to follow a sitemap as well.",
+            app: "None",
+            gith: "https://github.com/ryan2625/crawler",
+            image: "./assets/individual-proj-images/crawler.webp"
+        },
+        {
             name: "First Portfolio",
             tags: ["React", "HTML", "CSS"],
             description: "My first portfolio website trying out different ideas and designs.",
@@ -50,7 +58,7 @@ $(document).ready(function () {
         },
         {
             name: "EncoreTix",
-            tags: ["React Native", "Expo Go", "CSS", "HTML"],
+            tags: ["React Native", "Expo Go", "CSS", "HTML", "Node"],
             description: "A React Native app that integrates the Discovery API to show the latest concerts based on the user's search criteria. ",
             app: "None",
             gith: "https://github.com/ryan2625/EncoreTix",
