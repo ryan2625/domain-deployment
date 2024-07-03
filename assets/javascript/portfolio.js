@@ -27,7 +27,7 @@ $(document).ready(function () {
         {
             name: "Parser.io",
             tags: ["Python", "jQuery", "HTML", "CSS"],
-            description: "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features. ",
+            description: "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different UI features. ",
             app: "https://parser-io.vercel.app/",
             gith: "https://github.com/ryan2625/regex-repo-searcher",
             image: "./assets/individual-proj-images/parserio.webp"
@@ -66,7 +66,7 @@ $(document).ready(function () {
         },
         {
             name: "NLU Flavor App",
-            tags: ["React", "MongoDB", "Node", "Express", "CSS", "API", "HTML"],
+            tags: ["React", "MongoDB", "Node", "CSS", "API", "HTML"],
             description: "This app displays many different types of 'flavors' and allows the user to add reviews and filter items by search term.",
             app: "https://mern-flavor-site.onrender.com/",
             gith: "https://github.com/ryan2625/NLU-flavor-app",
