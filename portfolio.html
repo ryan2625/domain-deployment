@@ -12,11 +12,17 @@
             overflow-y: auto !important;
         }
 
+        h1 {
+            cursor: pointer;
+        }
+
         h2 {
             font-family: 'Krona One', sans-serif !important;
             color: #00043e;
             position: relative;
             z-index: 99;
+            margin-top: 15rem;
+            font-size: 30px;
         }
 
         p {
@@ -36,6 +42,7 @@
         .App {
             width: 100%;
             background-color: #f9f9f9;
+            min-height: 120vh;
         }
 
         .App>* {
@@ -87,6 +94,8 @@
             padding: 5px;
             margin-top: -5px;
             text-align: center;
+            justify-content: space-around;
+            height: 100%;
         }
 
         .tag {
@@ -96,28 +105,12 @@
             text-align: center;
         }
 
-        .tag::after {
-            position: absolute;
-            content: "";
+        .barriers {
             width: 85%;
             height: 2px;
             border-radius: 20px;
-            bottom: -13px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #00043e97;
-        }
-
-        .tag::before {
-            position: absolute;
-            content: "";
-            width: 85%;
-            height: 2px;
-            border-radius: 20px;
-            top: -8px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #00043e97;
+            background-color: #00043ec6;
+            margin: 0 auto;
         }
 
         .ps {
@@ -157,7 +150,7 @@
             color: #f9f9f9;
             position: absolute;
             backdrop-filter: blur(3px);
-            background-color: #000000b1;
+            background-color: #00000098;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -189,7 +182,7 @@
             width: 17px;
             height: 17px;
             border-radius: 100%;
-            background: linear-gradient(270deg, rgba(0, 4, 62, 1) 0%, rgba(94, 108, 253, 1) 85%);
+            background: linear-gradient(270deg, rgba(0, 4, 62, 1) 0%, #5e6cfd 85%);
             right: 5px;
             top: -47px;
         }
@@ -265,8 +258,8 @@
                 radial-gradient(farthest-side, transparent calc(100% - 30px), white calc(100% - 30px));
             mask:
                 radial-gradient(farthest-side, transparent calc(100% - 30px), white calc(100% - 30px));
-            right: -525px;
-            top: -525px;
+            right: -425px;
+            top: -425px;
             z-index: 0;
         }
 
@@ -277,6 +270,63 @@
             position: relative;
             z-index: 9999;
         }
+
+        .custom-shape-divider-top-1719947233 {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-top-1719947233 svg {
+            position: relative;
+            display: block;
+            width: calc(200% + 1.3px);
+            height: 173px;
+        }
+
+        .custom-shape-divider-top-1719947233 .shape-fill {
+            fill: #5E6CFD;
+        }
+
+        @media (max-width:1000px) {
+            .proj {
+                width: 200px;
+            }
+
+            .proj-grid {
+                padding: .1rem;
+                gap: 1rem;
+            }
+
+            h3 {
+                font-size: 15px !important;
+            }
+
+            .image-bot  {
+                height: 20px;
+            }
+
+            .circ2, .circ3, .circ2a, .circ3a {
+                display: none;
+            }
+        }
+
+        @media (max-width:675px) {
+            .proj {
+                flex-basis:47%;
+                min-width: 200px;
+            }
+        }
+
+        @media (max-width: 475px) {
+            .proj {
+                flex-basis: 100%
+            }
+        }
     </style>
 </head>
 
@@ -285,17 +335,26 @@
         <div class="nav">
             <div class="nav-container nav">
                 <h1>
-                    <a class="to-top" aria-label="Ryan-dev Logo" onClick="fetchPage()">
+                    <a class="to-top" aria-label="Ryan-dev Logo" onclick='fetchPage()'>
                         Ryan-Dev
                     </a>
                 </h1>
+                <p style="margin-right: 2rem; cursor: pointer;" onclick='fetchPage()'>Home</p>
             </div>
+        </div>
+        <div class="custom-shape-divider-top-1719947233">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
         </div>
         <div class="bodi">
             <h2>All projects</h2>
-            <div class="filter">Filters:
+            <div class="filter">Filter by:
                 <select name="Tags" id="Tags">
-                    <option value="None">None</option>
+                    <option value="None">Default</option>
                 </select>
             </div>
             <div class="ring"></div>
@@ -303,283 +362,14 @@
             </div>
         </div>
     </div>
+    <script type="module" src="./assets/javascript/portfolio.js">
+    </script>
+    <script>
+        function fetchPage() {
+            window.location.pathname = "/index.html"
+            window.scrollY(0)
+        }
+    </script>
 </body>
-<script>
-    function fetchPage() {
-        fetch("index.html")
-            .then(html => html.text())
-            .then(html2 => document.querySelector('.App').innerHTML = html2)
-    }
-
-    $(document).ready(function () {
-        data = [
-            {
-                name: "crypto-verse",
-                tags: ["React", "Node", "TypeScript", "MongoDB", "API", "HTML", "CSS", "SASS"],
-                description: "A crypto app that pulls the latest data from the Coin Gecko API. Complete with user auth, R3F, and more.",
-                app: "https://crypto-net-ten.vercel.app/",
-                gith: "https://github.com/ryan2625/crypto-net",
-                image: "./assets/individual-proj-images/cryptoVerse.webp"
-            },
-            {
-                name: "Sales-Sphere",
-                tags: ["React", "HTML", "CSS"],
-                description: "Fully functional ecommerce app with many different products and features.",
-                app: "https://simply-ecom.vercel.app/",
-                gith: "https://github.com/ryan2625/simply-ecom",
-                image: "./assets/individual-proj-images/salesSphere.webp"
-            },
-            {
-                name: "Nighthawk Fitness",
-                tags: ["React", "HTML", "CSS", "API"],
-                description: "Fitness app with a custom database of workout plans and exercises. Created during my time at Augustana College.",
-                app: "https://fitness-dev-2.web.app/",
-                gith: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
-                image: "./assets/individual-proj-images/nighthawk.webp"
-            },
-            {
-                name: "Parser.io",
-                tags: ["Python", "jQuery", "HTML", "CSS"],
-                description: "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features. ",
-                app: "https://parser-io.vercel.app/",
-                gith: "https://github.com/ryan2625/regex-repo-searcher",
-                image: "./assets/individual-proj-images/parserio.webp"
-            },
-            {
-                name: "ryan-dev.com",
-                tags: ["jQuery", "HTML", "CSS"],
-                description: "My current personal website made with jQuery and CSS.",
-                app: "https://ryan-dev.com/",
-                gith: "https://github.com/ryan2625/domain-deployment",
-                image: "./assets/individual-proj-images/ryandev.webp"
-            },
-            {
-                name: "First Portfolio",
-                tags: ["jQuery", "HTML", "CSS"],
-                description: "My first portfolio website trying out different ideas and designs.",
-                app: "https://ryan-dev.vercel.app/",
-                gith: "https://github.com/ryan2625/personalWebsite",
-                image: "./assets/individual-proj-images/personal.webp"
-            },
-            {
-                name: "Trademark-Crawler",
-                tags: ["Python"],
-                description: "A Python webscraper that will find individuals using certain trademarks.",
-                app: "None",
-                gith: "https://github.com/ryan2625/Trademark-Crawler",
-                image: "./assets/individual-proj-images/crawler.webp"
-            },
-            {
-                name: "EncoreTix",
-                tags: ["React Native", "Expo Go", "CSS"],
-                description: "A React Native app that integrates the Discovery API to show the latest concerts based on the user's search criteria. ",
-                app: "None",
-                gith: "https://github.com/ryan2625/EncoreTix",
-                image: "./assets/individual-proj-images/encore.webp"
-            },
-            {
-                name: "NLU Flavor App",
-                tags: ["React", "MongoDB", "Node", "Express", "CSS"],
-                description: "This app displays many different types of 'flavors' and allows the user to add reviews and filter items by search term.",
-                app: "https://mern-flavor-site.onrender.com/",
-                gith: "https://github.com/ryan2625/NLU-flavor-app",
-                image: "./assets/individual-proj-images/flavors.webp"
-            },
-            {
-                name: "Folder-Relocator",
-                tags: ["Batchfile"],
-                description: "Custom batch scripts used to setup repositories, IIS, and grant permissions to users.",
-                app: "None",
-                gith: "https://github.com/ryan2625/Folder-Relocator",
-                image: "./assets/individual-proj-images/cmd.webp"
-            },
-            {
-                name: "SQL-call-finder",
-                tags: ["Python", "SQL", "C#", "ASP.NET"],
-                description: "A Python script to search repositories and find all occurences of an SQL call or an SQL controller in ASP.NET.",
-                app: "None",
-                gith: "https://github.com/ryan2625/SQL-call-finder",
-                image: "./assets/individual-proj-images/crawler.webp"
-            },
-            {
-                name: ".NOTED",
-                tags: ["ASP.NET", "C#", "CSS"],
-                description: "A simple app to test server side rendering in the .NET ecosystem. ",
-                app: "None",
-                gith: "https://github.com/ryan2625/.NET-noted",
-                image: "./assets/individual-proj-images/asp.webp"
-            },
-            {
-                name: "IREM",
-                tags: ["ASP.NET", "C#", "CSS", "HTML", "SQL"],
-                description: "At my job, I've worked on the functionality and UI of this website (backend, analyitcs, SEO, etc)",
-                app: "https://www.irem.org/",
-                gith: "None",
-                image: "./assets/individual-proj-images/irem.webp"
-            },
-            {
-                name: "HTML Email Development",
-                tags: ["HTML", "CSS"],
-                description: "A collection of a few of my HTML emails that took different email clients and best practices into consideration. Tested emails with Litmus.",
-                app: "https://html-email-development.vercel.app/",
-                gith: "https://github.com/ryan2625/HTML-email-development",
-                image: "./assets/individual-proj-images/htmlemail.webp"
-            },
-            {
-                name: "Nexus Cars",
-                tags: ["HTML", "CSS", "React"],
-                description: "A dealership's website showcasing different models of vehicles.",
-                app: "https://nexus-cars.vercel.app/",
-                gith: "https://github.com/ryan2625/nexus-Cars",
-                image: "./assets/individual-proj-images/nexus.webp"
-            },
-            {
-                name: "Cross-City Boxing",
-                tags: ["HTML", "CSS", "React"],
-                description: "A responsive and small website created with React.",
-                app: "https://cross-city-boxing.vercel.app/",
-                gith: "https://github.com/ryan2625/cross-city-boxing",
-                image: "./assets/individual-proj-images/boxing.webp"
-            },
-            {
-                name: "Schedulizer",
-                tags: ["Java"],
-                description: "An fully functional course scheduling app that helps student's visualize their upcoming classes.",
-                app: "None",
-                gith: "https://github.com/ryan2625/schedule-visualizer",
-                image: "./assets/individual-proj-images/schedulizer.webp"
-            },
-            {
-                name: "Superclustering Methods for Optical Trajectories",
-                tags: ["Research"],
-                description: "A study of supervised clustering methods for optical mouse trajectory data from the Tap Strap 2.",
-                app: "./assets/images/380_Tapstrap.pdf",
-                gith: "https://github.com/ryan2625/Extensibility",
-                image: "./assets/individual-proj-images/tapstrap.webp"
-            },
-            {
-                name: "An Analysis on Network Attacks",
-                tags: ["Research"],
-                description: "A comprehensive study on the detection and prevention of network attacks such as DDOS, XSS, and Man in the Middle attacks",
-                app: "./assets/images/335_Comprehensive_Study.pdf",
-                gith: "None",
-                image: "./assets/individual-proj-images/prevention.webp"
-            },
-            {
-                name: "Security Vulnerabilities in WiFi Protocols",
-                tags: ["Research"],
-                description: "Exploring the vulnerabilities of different WiFi protocols (WEP/WPA/WPA2.",
-                app: "./assets/images/336_WiFiHacking.pdf",
-                gith: "None",
-                image: "./assets/individual-proj-images/WiFivuln.webp"
-            },
-        ]
-
-        function handleRender(data1) {
-            data1.forEach(item => {
-                const project = $(`
-                <div class="proj">
-                    <div class="img-cont">
-                        <div class="circ1"></div>
-                        <div class="circ2"></div>
-                        <div class="circ3"></div>
-                        <h3>${item.name}</h3>
-                        <img src="${item.image}" alt="Main Image" />
-                    </div>
-                    <div class="desc">
-                        <div class="ps">
-                            <p class="notag">${item.description}</p>
-                            <p class="tag">Tags: ${item.tags.join(", ")}</p>
-                            <div class="btnz"></div>
-                        </div>
-                    </div>
-                    <img class="image-bot" src="./assets/images/g21.jpg" alt="Bottom Image">
-                </div>
-            `);
-
-                if (item.app !== "None") {
-                    project.find('.btnz').append(`<a href="${item.app}">Live App</a>`);
-                }
-
-                if (item.gith !== "None") {
-                    project.find('.btnz').append(`<a href="${item.gith}">Github</a>`);
-                }
-
-                $('.proj-grid').append(project);
-            });
-        }
-
-        handleRender(data)
-        function renderTags() {
-            ["SASS", "jQuery", "React", "Research", "TypeScript", "Python", "React Native", "Batchfile", "Node", "HTML", "MongoDB", "API", "SQL", "ASP.NET", "C#", "CSS", "Java"].forEach(item => {
-                var option = $('<option></option>').attr('value', `${item}`).text(`${item}`);
-                $("#Tags").append(option)
-            })
-        }
-        renderTags()
-
-        function handleCirc() {
-            var elements = $('.proj')
-            var prev = 0
-            var count = 0
-            classes = [
-                "circ1",
-                "circ2",
-                "circ3"
-            ]
-
-            classes = [
-                "circ1a",
-                "circ2a",
-                "circ3a"
-            ]
-            for (var i = 0; i < elements.length; i++) {
-                var el = $(elements[i])
-                var elel = el.offset()
-                if (elel.top != prev) {
-                    prev = elel.top
-                    count++
-                }
-                if (count % 2 == 0) {
-                    var el1 = el.find('.circ1')
-                    el1.removeClass("circ1")
-                    el1.addClass("circ1a")
-                    var el2 = el.find('.circ2')
-                    el2.removeClass("circ2")
-                    el2.addClass("circ2a")
-                    var el3 = el.find('.circ3')
-                    el3.removeClass("circ3")
-                    el3.addClass("circ3a")
-                } else {
-                    var el1 = el.find('.circ1a')
-                    el1.removeClass("circ1a")
-                    el1.addClass("circ1")
-                    var el2 = el.find('.circ2a')
-                    el2.removeClass("circ2a")
-                    el2.addClass(".circ2")
-                    var el3 = el.find('.circ3a')
-                    el3.removeClass("circ3a")
-                    el3.addClass("circ3")
-                }
-            }
-        }
-        handleCirc()
-        $(window).on("resize", handleCirc)
-        $("select").on("change", function () {
-            filter = this.value
-            var dc = JSON.parse(JSON.stringify(data));
-            dc = dc.filter((item) =>
-                item.tags.indexOf(filter) !== -1
-            )
-            $(".proj-grid").html("")
-            if (filter === "None") {
-                handleRender(data)
-            } else {
-                handleRender(dc)
-
-            }
-        })
-    })
-</script>
 
 </html>

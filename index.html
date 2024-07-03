@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="htmx">
 
 <head>
    <meta charset="UTF-8">
@@ -9,6 +9,7 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script type="module" src="./assets/javascript/vital.js"></script>
 </head>
+
 <body>
    <div class="App">
       <div class="nav">
@@ -118,7 +119,8 @@
                </svg>
             </div>
          </div>
-         <h3 style="font-style: italic;">See my complete portfolio <a id="portfolio-nav" onclick="fetchPage()">here</a></h3>
+         <h3 style="font-style: italic; text-align: center; margin: 20px;">See my complete portfolio <a id="portfolio-nav" onclick="fetchPage()">here</a>
+         </h3>
       </div>
       <div class="about-me">
          <div class="custom-shape-divider-bottom-1699105515">
@@ -240,11 +242,12 @@
                { repeat: 999, duration: 3000, yoyo: true }
             ).start()
          ))
+
       function fetchPage() {
-        fetch("portfolio.html")
-        .then(html => html.text())
-        .then(html2 => document.querySelector('.App').innerHTML = html2)
-    }
+         window.location.pathname = "/portfolio.html"
+         window.scrollY(0)
+      }
+
    </script>
    <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

@@ -3,7 +3,7 @@ export const data = [
         image : './assets/images/cryptoVerse.webp',
         alt: "The home page of crypto-verse",
         title : "crypto-verse",
-        tech : [ "MERN Stack", "SCSS", "TypeScript"],
+        tech : [ "MERN Stack", "SASS", "TypeScript"],
         description : "A full-stack crypto app updated with the latest crypto data through CoinGecko's RESTful API. This app allows user authentication with JWT, supports CRUD operations, and dynamically renders user data from the backend.",
         link : "https://crypto-net-ten.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
@@ -34,6 +34,15 @@ export const data = [
         github: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
         svg: "./assets/SVGs/dumbbell.svg",
         svgClass: "top-left"
+    },
+    {
+        image : './assets/individual-proj-images/parserio.webp',
+        alt: "Parser.io Home Page",
+        title : "Parser.io",
+        tech : ["jQuery", "CSS","HTML"],
+        description : "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features",
+        link : "https://parser-io.vercel.app",
+        github : "https://github.com/ryan2625/regex-repo-searcher"
     },
     /*
     {
