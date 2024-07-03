@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(".loading").addClass("none");
         console.log("Hello fellow developers =)");
         $("html").css("overflow-y", "scroll");
-    }, 0);
+    }, 1800);
 
     fetch("../assets/javascript/paths.json")
        .then(response => response.json())

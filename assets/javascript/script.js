@@ -119,15 +119,15 @@ $(document).ready(function () {
         document.body.classList.toggle("dark_mode")
         themeToggler.classList.toggle("rotate-180");
         if (document.body.classList.contains("dark_mode")) {
+            document.getElementById("savg").src = "./assets/SVGs/blob-haikei2.svg"
             document.getElementById("&0").src = "./assets/SVGs/bitcoin2.svg"
             document.getElementById("&2").src = "./assets/SVGs/dumbbell2.svg"
             document.getElementById("&4").src = "./assets/SVGs/glove2.svg"
-            document.getElementById("&-1").src = "./assets/SVGs/blob-haikei2.svg"
         } else {
+            document.getElementById("savg").src = "./assets/SVGs/blob-haikei1.svg"
             document.getElementById("&0").src = "./assets/SVGs/bitcoin.svg"
             document.getElementById("&2").src = "./assets/SVGs/dumbbell.svg"
             document.getElementById("&4").src = "./assets/SVGs/glove.svg"
-            document.getElementById("&-1").src = "./assets/SVGs/blob-haikei1.svg"
         }
     })
 });
