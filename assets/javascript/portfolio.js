@@ -195,11 +195,11 @@ $(document).ready(function () {
         `);
 
             if (item.app !== "None") {
-                project.find('.btnz').append(`<a href="${item.app}">Live App</a>`);
+                project.find('.btnz').append(`<a href="${item.app}" target="_blank">Live App</a>`);
             }
 
             if (item.gith !== "None") {
-                project.find('.btnz').append(`<a href="${item.gith}">Github</a>`);
+                project.find('.btnz').append(`<a href="${item.gith}" target="_blank">Github</a>`);
             }
 
             $('.proj-grid').append(project);
