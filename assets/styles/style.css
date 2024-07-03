@@ -515,7 +515,7 @@ label{
   background-color: var(--mist-purple);
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .individual > *{
@@ -846,6 +846,10 @@ label{
   animation: glow 1s infinite alternate;
   z-index: 101; 
   box-shadow: 10px 0px 60px 20px rgba(255, 255, 255, 0.5); 
+}
+
+#irem {
+  color: var(--less-white);
 }
 
 @keyframes glow {

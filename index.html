@@ -144,17 +144,21 @@
          </div>
          <div class="about-desc hidden">
             <p>
-               Hello! My name is Ryan, and I am an aspiring web developer with a passion for writing dynamic and elegant
+               <!--
+               Added 2023, commented out July 3rd 2024
+               Hello! My name is Ryan, and I am a web developer with a passion for writing dynamic and elegant
                code. I recently graduated from Augustana College with a B.A. in computer science, where I served as the
                treasurer of the Google Developer Student Club. If you would like to see more of my expertise and
                research, check out my <a id="first-portfolio" href="https://ryan-dev.vercel.app/" target="_blank"
                   aria-label="Navigate to my first portfolio">first
                   portfolio.</a>
+                  -->
+                  Hey there, my name is Ryan and I am a software engineer that specializes in optimizing websites and building custom web solutions. I currently work as a web developer for <a href="https://www.irem.org/" target="blank" aria-label="Visit IREM.org"id="irem">IREM</a>, building out their website using JS frameworks, .NET, and Azure Data Studio.
             </p>
             <p>
                In addition to my interest in web development, I have also been performing the violin in various
                orchestras for the past 14 years (give "Zigeunerweisen" by Sarasate a listen!). Additionally, I am an
-               avid weightlifter and passionate about fitness. If you would like to discuss anything, please reach me at
+               avid weightlifter and passionate about fitness. If you would like to discuss anything, please reach me through LinkedIn or with
                my email below.
             </p>
          </div>
@@ -165,7 +169,7 @@
          </div>
          <div class="footer">
             <p>
-               All rights reserved © 2023 Ryan Freas
+               All rights reserved © 2024 Ryan Freas
             </p>
             <ul>
                <li>
@@ -244,6 +248,7 @@
          ))
 
       function fetchPage() {
+         window.location.hash = ""
          window.location.pathname = "/portfolio.html"
          window.scrollY(0)
       }

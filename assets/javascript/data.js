@@ -36,11 +36,11 @@ export const data = [
         svgClass: "top-left"
     },
     {
-        image : './assets/individual-proj-images/parserio.webp',
+        image : './assets/images/parser.png',
         alt: "Parser.io Home Page",
         title : "Parser.io",
         tech : ["jQuery", "CSS","HTML"],
-        description : "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features",
+        description : "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features.",
         link : "https://parser-io.vercel.app",
         github : "https://github.com/ryan2625/regex-repo-searcher"
     },
