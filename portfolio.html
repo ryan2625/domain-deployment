@@ -54,6 +54,11 @@
         .nav {
             max-width: 100vw;
         }
+
+        .flex {
+            justify-content: space-around;
+        }
+        
         .bodi {
             margin-top: 130px;
             text-align: center;
@@ -338,7 +343,7 @@
 <body>
     <div class="App">
         <div class="nav">
-            <div class="nav-container nav">
+            <div class="nav-container nav flex">
                 <h1>
                     <a class="to-top" aria-label="Ryan-dev Logo" onclick='fetchPage()'>
                         Ryan-Dev
@@ -371,7 +376,7 @@
     </script>
     <script>
         function fetchPage() {
-            window.location.pathname = "/index.html"
+            window.location.pathname = ""
             window.scrollY(0)
         }
     </script>
