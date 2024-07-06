@@ -148,7 +148,7 @@ $(document).ready(function () {
             name: "Superclustering Methods for Optical Trajectories",
             tags: ["Research"],
             description: "A study of supervised clustering methods for optical mouse trajectory data from the Tap Strap 2.",
-            app: "./assets/images/380_Tapstrap.pdf",
+            app: "./assets/other/380_Tapstrap.pdf",
             gith: "https://github.com/ryan2625/Extensibility",
             image: "./assets/individual-proj-images/tapstrap.webp"
         },
@@ -156,7 +156,7 @@ $(document).ready(function () {
             name: "An Analysis on Network Attacks",
             tags: ["Research"],
             description: "A comprehensive study on the detection and prevention of network attacks such as DDOS, XSS, and Man in the Middle attacks.",
-            app: "./assets/images/335_Comprehensive_Study.pdf",
+            app: "./assets/other/335_Comprehensive_Study.pdf",
             gith: "None",
             image: "./assets/individual-proj-images/prevention.webp"
         },
@@ -164,7 +164,7 @@ $(document).ready(function () {
             name: "Security Vulnerabilities in WiFi Protocols",
             tags: ["Research"],
             description: "Exploring the vulnerabilities of different WiFi protocols (WEP/WPA/WPA2.",
-            app: "./assets/images/336_WiFiHacking.pdf",
+            app: "./assets/other/336_WiFiHacking.pdf",
             gith: "None",
             image: "./assets/individual-proj-images/WiFivuln.webp"
         },
