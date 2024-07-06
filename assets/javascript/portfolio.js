@@ -98,7 +98,7 @@ $(document).ready(function () {
         },
         {
             name: "IREM",
-            tags: [".NET", "C#", "CSS", "HTML", "SQL", "CMS"],
+            tags: [".NET", "C#", "CSS", "HTML", "SQL", "CMS", "jQuery"],
             description: "At my job, I've worked on the functionality and UI of this website (backend, analyitcs, SEO, etc).",
             app: "https://www.irem.org/",
             gith: "None",
