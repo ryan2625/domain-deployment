@@ -500,7 +500,7 @@ label{
 }
 
 .portfolio-display{
-  padding: 3rem 6rem;
+  padding: 3rem 6rem 1rem 6rem;
   max-width: 1300px;
   display: flex;
   flex-direction: column;
@@ -746,6 +746,57 @@ label{
   right: 50px !important;
 }
 
+.ball {
+  width: 19px;
+  height: 19px;
+  background-color: var(--deep-blue2);
+  border-radius: 100%;
+  transform: translate(-7px, 28px);
+}
+
+.experience {
+  max-width: 1100px;
+  width: 100%;
+  margin: 4rem auto 0 auto;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.experience h2 {
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+}
+
+.exper-cont {
+  position: relative;
+  overflow: hidden;
+  padding-left: 2.5rem;
+  max-width: 1000px;
+}
+
+.exper-cont h3 {
+  font-family: 'Krona One', sans-serif;
+}
+
+.exper-cont ul{
+  list-style: circle ;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 2rem;
+  gap: .5rem;
+}
+
+.total-exper {
+  top: 0px;
+  left: 10px;
+  height: 100%;
+  width: 5px;
+  background-color: var(--deep-blue2);
+  position: absolute;
+}
+
+
 #burger{
   width: 60px;
   position: absolute;
@@ -871,7 +922,7 @@ label{
   }
 
   .portfolio-display{
-    padding: 3rem .25rem;
+    padding: 3rem .25rem 1rem .25rem;
   }
 
   .relative{

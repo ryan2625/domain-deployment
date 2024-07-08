@@ -113,6 +113,16 @@ $(document).ready(function () {
         let progress = (currHeight - $(window).height())/(docHeight - $(window).height()) * 100;
         $(".progress-b").width(progress + "%");
     });
+
+    
+    $(window).on("resize", checkWidth)
+
+    function checkWidth() {
+        var eles = $(".portfolio-divider")
+        $("#calc-width").width(eles[0].clientWidth)
+    }
+
+    checkWidth()
     
     themeToggler.addEventListener("click", function () {
         clickSound.play();
