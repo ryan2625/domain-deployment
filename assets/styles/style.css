@@ -24,8 +24,6 @@ html{
     border-radius: 10px;
   }
 
-  /* Please don't judge me for how I wrote the css... I was in a hurry =) */
-
   .dark_mode{
     --deep-blue: #f6f6f6; 
     --near-white: #4e4e4e;   
@@ -749,18 +747,22 @@ label{
 .ball {
   width: 19px;
   height: 19px;
-  background-color: var(--deep-blue2);
+  background-color: var(--deep-blue);
   border-radius: 100%;
   transform: translate(-7px, 28px);
 }
 
 .experience {
   max-width: 1100px;
-  width: 100%;
-  margin: 4rem auto 0 auto;
+  padding: 1rem;
+  margin: 2rem auto 0 auto;
   font-family: 'Jost', sans-serif;
   font-weight: 700;
   font-size: 20px;
+}
+
+.exper-list > li {
+  transform: none !important;
 }
 
 .experience h2 {
@@ -792,7 +794,7 @@ label{
   left: 10px;
   height: 100%;
   width: 5px;
-  background-color: var(--deep-blue2);
+  background-color: var(--deep-blue);
   position: absolute;
 }
 
@@ -961,6 +963,10 @@ label{
 
   .headings{
     margin-top: 150px;
+  }
+
+  .experience {
+    margin: 1.5rem auto 0 auto;
   }
 
   .intro{
@@ -1159,6 +1165,18 @@ label{
 @media (max-width: 640px) {
   .transform-blob2{
     display: none;
+  }
+
+  .exper-cont h3 {
+    font-size: 20px;
+  }
+
+  .exper-cont > p {
+    font-size: 15px;
+  }
+  
+  .exper-list > li {
+    font-size: 18px;
   }
 }
 
