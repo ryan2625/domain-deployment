@@ -12,13 +12,13 @@ $(document).ready(function () {
         var h1 = $('<h1>').text(element.title);
         var p = $('<p>').text(element.description);
         var buttons = $('<div>').addClass('buttons');
-        var a1 = $('<a>').attr('href', element.link).text('Live App').attr("target", "_blank");
-        var a2 = $('<a>').attr('href', element.github).text('Github').attr("target", "_blank");
+        var a1 = $('<a>').attr('href', element.link).text('Live App').attr("target", "_blank").attr('alt', "visit the live link of this app");
+        var a2 = $('<a>').attr('href', element.github).text('Github').attr("target", "_blank").attr('alt', "visit the github of this app");
         var techDiv = $('<div>').addClass('tech-div');
         var svgContainer = $('<div>').addClass(element.svgClass).addClass("svg" + index);
 
         if (element.svg) {
-            var svg = $('<img>').attr('src', element.svg).addClass(element.title).attr('id', "&" + index);
+            var svg = $('<img>').attr('src', element.svg).addClass(element.title).attr('id', "&" + index).attr('alt', "floating icon " + element.svg);
             svgContainer.append(svg)
             divider.append(svgContainer);
         }

@@ -25,6 +25,7 @@ html{
   }
 
   .dark_mode{
+    --white:#fff;
     --deep-blue: #f6f6f6; 
     --near-white: #4e4e4e;   
     --less-white: #ffffff;   
@@ -43,6 +44,7 @@ html{
   }
 
   :root{
+    --white:#fff;
     --deep-blue: #111433;
     --near-white: #f9f9f9;
     --less-white: #f2f5fb;
@@ -245,7 +247,7 @@ label{
 }
 
 .nav-container > h1 > a{
-  color: var(--less-white);
+  color: var(--white);
   margin-left: 1rem;
   font-family: Poppins,sans-serif;
   height: fit-content;
@@ -257,7 +259,7 @@ label{
 }
 
 .nav-container > ul > li > a {
-  color: var(--less-white);
+  color: var(--white);
   text-decoration: none;
   margin-left: 1rem;
   transition: all 0.3s ease-in-out;
@@ -804,6 +806,10 @@ label{
   position: absolute;
   right: 0px;
   cursor: pointer;
+}
+
+#savg {
+  aspect-ratio: 3/2;
 }
 
 
