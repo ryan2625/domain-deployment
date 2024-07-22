@@ -449,8 +449,9 @@ label{
 }
 
 .intro > p{
-  margin-top: 10rem;
+  margin-top: 8rem;
   max-width: 300px;
+  padding-bottom: 2.1em;
 }
 
 .headings img:first-child{
@@ -1255,7 +1256,7 @@ label{
   }
 
   .divider{
-    margin: 3rem;
+    margin: 1.5rem;
     width: 90%;
   }
 
