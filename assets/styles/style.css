@@ -825,7 +825,7 @@ label{
   height: 14px;
   border-radius: 100%;
   background-color: var(--deep-blue);
-  top: 5px;
+  top: 10px;
   left: calc(-1.25rem - 5px);
 }
 
@@ -835,7 +835,7 @@ label{
   width: 3px;
   height: calc(100% + 2rem - 5px);
   background-color: var(--deep-blue);
-  top: 5px;
+  top: 10px;
   left: -1.25rem;
 }
 
