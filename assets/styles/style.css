@@ -41,6 +41,9 @@ html{
     --prog: #ffffff;
     --prog2: #ffffff53;
     --track: #000;
+    --calendar: url(/assets/SVGs/Feather-core-calendar-dark.svg);
+    --location: url(/assets/SVGs/location-point-dark.svg);
+    --tech: url(/assets/SVGs/tech-icon-dark.svg);
   }
 
   :root{
@@ -60,6 +63,9 @@ html{
     --prog: #111433;
     --prog2: #11143353;
     --track: #f9f9f9;
+    --calendar: url(/assets/SVGs/Feather-core-calendar.svg);
+    --location: url(/assets/SVGs/location-point.svg);
+    --tech: url(/assets/SVGs/tech-icon.svg);
   }
 
 body { 
@@ -756,6 +762,7 @@ label{
 
 .experience {
   max-width: 1100px;
+  width: fit-content;
   padding: 1rem;
   margin: 2rem auto 0 auto;
   font-family: 'Jost', sans-serif;
@@ -770,6 +777,7 @@ label{
 .experience h2 {
   font-family: 'Krona One', sans-serif;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .exper-cont {
@@ -779,25 +787,134 @@ label{
   max-width: 1000px;
 }
 
-.exper-cont h3 {
-  font-family: 'Krona One', sans-serif;
+.exper-row {
+  display: flex;
+  gap: 2.5rem;
+  margin: 0 auto 1rem auto;
 }
 
-.exper-cont ul{
-  list-style: circle ;
-  flex-direction: column;
-  align-items: baseline;
-  margin-left: 2rem;
-  gap: .5rem;
+.right-exper {
+  position: relative;
 }
 
-.total-exper {
-  top: 0px;
-  left: 10px;
-  height: 100%;
-  width: 5px;
-  background-color: var(--deep-blue);
+.right-exper::after {
   position: absolute;
+  content: "";
+  width: 3px;
+  height: calc(100% + 2rem);
+  background-color: var(--deep-blue);
+  top: 0;
+  left: -1.25rem;
+}
+
+.right-exper::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: var(--deep-blue);
+  top: 10px;
+  left: calc(-1.25rem - 5px);
+}
+
+.first-exp::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: var(--deep-blue);
+  top: 5px;
+  left: calc(-1.25rem - 5px);
+}
+
+.first-exp::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: calc(100% + 2rem - 5px);
+  background-color: var(--deep-blue);
+  top: 5px;
+  left: -1.25rem;
+}
+
+.exper-row > div{
+  font-weight: 900;
+  width: 275px;
+  margin-bottom: 1rem;
+}
+
+.exper-row > div > h3 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.exper-row > div > p {
+  margin: 0;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.company {
+
+}
+
+.date {
+  margin: 1rem 0 0 1.25rem !important;
+  display: inline-block;
+  position: relative;
+}
+
+.date::after {
+  content: "";
+  background-image: var(--calendar);
+  background-size: 17px 17px;
+  width: 17px;
+  height: 17px;
+  left: -22px;
+  position: absolute;
+  bottom: 4px;
+}
+
+.location {
+  margin: 0rem 0 0 1.25rem !important;
+  display: inline-block;
+  position: relative;
+}
+
+.location::after {
+  content: "";
+  background-image: var(--location);
+  background-size: 17px 17px;
+  width: 17px;
+  height: 17px;
+  left: -22px;
+  position: absolute;
+  bottom: 4px;
+}
+
+.tech-exper {
+  margin: 0rem 0 0 1.25rem !important;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tech-exper::after {
+  content: "";
+  transform: rotate(180deg);
+  background-image: var(--tech);
+  background-size: 17px 17px;
+  width: 17px;
+  height: 17px;
+  left: -22px;
+  position: absolute;
+  bottom: 4px;
+}
+
+.show-mobile > * {
+  display: none;
 }
 
 
@@ -1184,6 +1301,23 @@ label{
   .exper-list > li {
     font-size: 18px;
   }
+
+  .exper-row > div {
+    width: 220px;
+  }
+
+  .experience {
+    margin: 1.5rem auto 0rem 
+  }
+
+  .left-exper {
+    display: none;
+  }
+
+  .show-mobile > * {
+    display: block;
+  }
+
 }
 
 @media (max-width: 500px) {
