@@ -7,5 +7,5 @@ Tech used: HTML, JQuery, CSS
 
 Domain purchased via Hostinger.
 
-![Personal website](./domain-light-mode.png)
-![Personal website](./domain-dark-mode.png)
+![Personal website](/assets/images/domain-light-mode.png)
+![Personal website](/assets/images/domain-dark-mode1.png)
