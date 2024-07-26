@@ -74,6 +74,7 @@ body {
   color: var(--deep-blue);
   background-color: var(--near-white);
   letter-spacing: 1px;
+  overflow-x: hidden !important;
 }
 
 ul{
