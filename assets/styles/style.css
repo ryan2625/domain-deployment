@@ -89,13 +89,11 @@ h1{
   font-family: 'Krona One', sans-serif;
 }
 
-label{
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
+label {
   text-wrap: nowrap !important;
   text-align: center;
+  margin: 10px auto 0 auto;
+  display: inline-block;
 }
 
 .App{
@@ -199,6 +197,10 @@ label{
     height: 0%;
   }
   
+}
+
+.body-scroll-y {
+  overflow-y: hidden !important;
 }
 
 .firstBanner{
@@ -688,7 +690,9 @@ label{
 }
 
 .about-pic{
-  position: relative;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .transform-blob2{
@@ -702,14 +706,11 @@ label{
   width: 100%;
   max-width: 550px;
   max-height: 550px;
-  margin-bottom: 10rem;
   border-radius: 100px;
   border: 2px solid var(--white);
 }
 
 .footer{
-  position: absolute;
-  bottom: 15px;
   font-size: 15px;
   display: flex;
   justify-content: space-around;
@@ -1146,12 +1147,10 @@ label{
   .about-pic{
     max-width: 450px;
     align-self: center;
-    margin-bottom: 5rem;
   }
 
   .footer{
     flex-direction: column;
-    margin-left: -2rem;
   }
 
   .footer > ul {
@@ -1364,7 +1363,6 @@ label{
 
   .footer{
     margin: 0 auto;
-    margin-left: -.75rem;
   }
 
 }

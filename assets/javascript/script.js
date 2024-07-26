@@ -84,20 +84,9 @@ $(document).ready(function () {
         }
     });
 
-    $("#burger").on("click", function () {
+    $("#burger, .close, .close-li").on("click", function () {
         $(".mobile-ul").toggleClass("mobile-hidden");
-    });
-
-    $(".close, .close-li").on("click", function () {
-        $(".mobile-ul").toggleClass("mobile-hidden");
-    });
-
-    $(".close, .close-li").on("click", function () {
-        $(".mobile-ul").toggleClass("mobile-hidden");
-    });
-
-    $(".close, .close-li").on("click", function () {
-        $(".mobile-ul").toggleClass("mobile-hidden");
+        $("body, html").toggleClass("body-scroll-y");
     });
 
     $(".to-top").on("click", function () {
