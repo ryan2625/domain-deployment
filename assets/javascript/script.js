@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
     const octokit = new Octokit({
-        auth: "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"
+        auth: "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"
     });
 
     async function editFile() {
@@ -23,7 +23,7 @@ $(document).ready(function () {
         var query_provider = new URLSearchParams(window.location.search).get("src_token")
         data+= `<br> ${now.toString()} ${query_provider}` 
         let final_payload = btoa(data)
-        // Edit in the future to show content based on URL params, etc
+        // Edit in the future to show content based on URL params, etc. Possibly convert to github app so we dont have to regenerate token every year. Also convert readme to txt file.
 
         await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
             owner: 'ryan2625',
