@@ -5,18 +5,10 @@ $(document).ready(function () {
 
     //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
     const octokit = new Octokit({
-        auth: atob("Z2l0aHViX3BhdF8xMUFWUlY3Q0kwZFYzMXJLSU9WU1pOX2xGRWdBNVBUYVoxZjVEZlkzNXZkMUdreUJ4eUtUZ1dYSzZBTDRpMFlhU2xYNElTQ1E1VXdLdmlQNzlH")
+        auth: atob("Z2l0aHViX3BhdF8xMUFWUlY3Q0kweTJ3NDlMM0J5NTF6X242QVZWNWx0Q0NJNGdpOG5xVVh6cFBrZjZabWZKSm43Y241aWJiTU84SHBBM0tRQkE0VG1GQUxhY3dw")
     });
 
-    async function editFile() {
-        var txt_file = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-            owner: 'ryan2625',
-            repo: 'private_logger',
-            path: 'README.md',
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28'
-            }
-        })
+    /*
         
         const now = new Date()
         let data = atob(txt_file.data.content)
@@ -48,7 +40,7 @@ $(document).ready(function () {
             console.log("No parameters this time!")
         }
     }
-
+*/
 
     data.forEach((element, index) => {
         var img = $('<img>').attr('src', element.image).attr("loading", "lazy").attr("alt", element.alt)
