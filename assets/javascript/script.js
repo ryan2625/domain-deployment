@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
     const octokit = new Octokit({
-        auth: "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"
+        auth: "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"
     });
 
     async function editFile() {
