@@ -30,8 +30,7 @@ $(document).ready(function () {
         const now = new Date()
         let data = atob(txt_file.data.content)
         var query_provider = new URLSearchParams(window.location.search).get("src_token")
-        data+= `<br> ${now.toString()} ${query_provider}` 
-        let final_payload = btoa(data)
+        let final_payload = btoa(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br>` + data.slice(21))
         // Edit in the future to show content based on URL params, etc. Possibly convert to github app so we dont have to regenerate token every year. Also convert readme to txt file.
 
         await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
