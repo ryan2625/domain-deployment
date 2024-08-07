@@ -4,9 +4,9 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/rest"
 $(document).ready(function () {
 
     //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
-    const octokit = new Octokit({
-        auth: atob("Z2l0aHViX3BhdF8xMUFWUlY3Q0kweTJ3NDlMM0J5NTF6X242QVZWNWx0Q0NJNGdpOG5xVVh6cFBrZjZabWZKSm43Y241aWJiTU84SHBBM0tRQkE0VG1GQUxhY3dw")
-    });
+
+     atob("Z2l0aHViX3BhdF8xMUFWUlY3Q0kwWGpjbnppOXREcGNLXzVUekxhSmhmQmxsVUJybjJybkVJblc4Yk1jU3JBUnd3MDFlWjZDUlpDS0FER1hNWVpHTE9HR0JTcHA2")
+  
 
     /*
         
