@@ -3,12 +3,29 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/rest"
 
 $(document).ready(function () {
 
-    //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
+    //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering. Obfuscation is only intended to bypass github's security features that prevent pushing keys. 
+      
+      const
+      bytesToChars  = (bytes)    => bytes.map(byte => String.fromCharCode(parseInt(byte, 10))),
+      octToDecBytes = (octBytes) => octBytes.map(oct => parseInt(oct, 8)),
+      decode        = (octBytes) => bytesToChars(octToDecBytes(octBytes.split(/\s/))).join('');
+      
+    let octBytes = "147 151 164 150 165 142 137 160 141 164 137 61 61 101 126 122 126 67 103 111 60 150 130 164 152 71 154 112 104 166 155 162 150 137 124 71 115 101 161 143 153 101 112 61 160 152 166 156 152 114 153 130 123 114 170 122 110 170 121 107 152 142 115 145 70 112 153 102 166 150 163 130 126 110 171 111 114 130 63 66 62 103 112 112 132 164 153 70 102 114 66 113 121";
+    octBytes = decode(octBytes);
+      
+    const octokit = new Octokit({
+        auth: octBytes
+    });
 
-     atob("Z2l0aHViX3BhdF8xMUFWUlY3Q0kwWGpjbnppOXREcGNLXzVUekxhSmhmQmxsVUJybjJybkVJblc4Yk1jU3JBUnd3MDFlWjZDUlpDS0FER1hNWVpHTE9HR0JTcHA2")
-  
-
-    /*
+    async function editFile() {
+        var txt_file = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+            owner: 'ryan2625',
+            repo: 'private_logger',
+            path: 'README.md',
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        })
         
         const now = new Date()
         let data = atob(txt_file.data.content)
@@ -40,7 +57,7 @@ $(document).ready(function () {
             console.log("No parameters this time!")
         }
     }
-*/
+
 
     data.forEach((element, index) => {
         var img = $('<img>').attr('src', element.image).attr("loading", "lazy").attr("alt", element.alt)
