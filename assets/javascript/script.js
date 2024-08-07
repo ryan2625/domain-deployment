@@ -1,6 +1,54 @@
 import { data } from "./data.js";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/rest"
 
 $(document).ready(function () {
+
+    //This fine-grained access token only has access to write to a private repo I don't care about and 0 account privileges; its exposure is not important. A github readme is my database for logging URL sources if you're wondering.
+    const octokit = new Octokit({
+        auth: "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"
+    });
+
+    async function editFile() {
+        var txt_file = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+            owner: 'ryan2625',
+            repo: 'private_logger',
+            path: 'README.md',
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        })
+        
+        const now = new Date()
+        let data = atob(txt_file.data.content)
+        var query_provider = new URLSearchParams(window.location.search).get("src_token")
+        data+= `<br> ${now.toString()} ${query_provider}` 
+        let final_payload = btoa(data)
+        // Edit in the future to show content based on URL params, etc
+
+        await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+            owner: 'ryan2625',
+            repo: 'private_logger',
+            path: 'README.md',
+            message: 'Routine Update',
+            committer: {
+                name: 'ryan2625',
+                email: 'ryancfreas@gmail.com'
+            },
+            content: final_payload,
+            sha: txt_file.data.sha,
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        }) 
+    }
+    if (window.location.search != ""){
+        try {
+            editFile()
+        } catch (exception ){
+            console.log("No parameters this time!")
+        }
+    }
+
 
     data.forEach((element, index) => {
         var img = $('<img>').attr('src', element.image).attr("loading", "lazy").attr("alt", element.alt)
@@ -35,7 +83,7 @@ $(document).ready(function () {
         desc.append(p)
         desc.append(buttons)
         titles.append(h1)
-        
+
         element.tech.forEach((element, index) => {
             var p = $('<p>').text(element);
             techDiv.append(p)
@@ -97,14 +145,14 @@ $(document).ready(function () {
     var clickSound = document.getElementById("clickSound");
     let themeToggler = document.querySelector("#dark-mode")
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
         let currHeight = window.scrollY + $(window).height();
         let docHeight = $(document).height();
-        let progress = (currHeight - $(window).height())/(docHeight - $(window).height()) * 100;
+        let progress = (currHeight - $(window).height()) / (docHeight - $(window).height()) * 100;
         $(".progress-b").width(progress + "%");
     });
 
-    
+
     $(window).on("resize", checkWidth)
 
     function checkWidth() {
@@ -113,7 +161,7 @@ $(document).ready(function () {
     }
 
     checkWidth()
-    
+
     themeToggler.addEventListener("click", function () {
         clickSound.play();
         document.body.classList.toggle("dark_mode")

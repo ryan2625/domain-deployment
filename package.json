@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "purify-css": "^1.2.5"
+  },
+  "dependencies": {
+    "octokit": "^4.0.2"
   }
 }
