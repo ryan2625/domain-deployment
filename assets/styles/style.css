@@ -810,6 +810,32 @@ label {
   left: -1.25rem;
 }
 
+.early {
+  position: relative;
+}
+
+.early::after{
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: calc(100% + 2rem);
+  background-color: var(--deep-blue);
+  top: 0;
+  left: -1.25rem;
+background: linear-gradient(180deg, var(--deep-blue) 25%, rgba(0,0,0,0) 96%) !important;
+}
+
+.early::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: var(--deep-blue);
+  top: 10px;
+  left: calc(-1.25rem - 5px);
+}
+
 .right-exper::before {
   position: absolute;
   content: "";
