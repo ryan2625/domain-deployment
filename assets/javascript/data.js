@@ -37,11 +37,11 @@ export const data = [
     },
     {
         image : './assets/images/parser.png',
-        alt: "Parser.io Home Page",
-        title : "Parser.io",
+        alt: "Sha256.io Home Page",
+        title : "Sha256.io",
         tech : ["jQuery", "CSS","HTML"],
-        description : "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different exciting UI features.",
-        link : "https://parser-io.vercel.app",
+        description : "Originally designed to be an online phrase searcher using regex, this project has been repurposed into an online file hasher.",
+        link : "https://sha256-io.vercel.app/",
         github : "https://github.com/ryan2625/regex-repo-searcher"
     },
     /*
