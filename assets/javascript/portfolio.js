@@ -25,10 +25,10 @@ $(document).ready(function () {
             image: "./assets/individual-proj-images/nighthawk.webp"
         },
         {
-            name: "Parser.io",
+            name: "Sha256.io",
             tags: ["Python", "jQuery", "HTML", "CSS"],
-            description: "Originally designed to be an online phrase searcher using regex, this project's main purpose is to show off different UI features. ",
-            app: "https://parser-io.vercel.app/",
+            description:"Originally designed to be an online phrase searcher using regex, this project has been repurposed into an online file hasher.",
+            app: "https://sha256-io.vercel.app/",
             gith: "https://github.com/ryan2625/regex-repo-searcher",
             image: "./assets/individual-proj-images/parserio.webp"
         },
