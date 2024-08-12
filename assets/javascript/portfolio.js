@@ -93,7 +93,7 @@ $(document).ready(function () {
             tags: [".NET", "C#", "CSS"],
             description: "A simple app to test server side rendering in the .NET ecosystem. ",
             app: "None",
-            gith: "https://github.com/ryan2625/.NET-noted",
+            gith: "https://github.com/ryan2625/ASP.NET-note-app",
             image: "./assets/individual-proj-images/asp.webp"
         },
         {
