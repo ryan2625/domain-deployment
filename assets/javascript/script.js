@@ -42,7 +42,6 @@ $(document).ready(function () {
         let data = atob(txt_file.data.content)
         var query_provider = new URLSearchParams(window.location.search).get("src_token")
         var cleanData = JSON.stringify(dataRef)
-        debugger
         cleanData = cleanData.replace(/[^a-zA-Z0-9<>?/;:{}+_)(*&^%$#@!-=)>\s]/g, "_")
         console.log(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br> | Data: ${cleanData} <br><br>`)
         let final_payload = btoa(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br> | Data: ${cleanData}` + data)
