@@ -23,8 +23,7 @@ $(document).ready(function () {
                 logData(dataRef)
             })
             .catch(error => {
-                console.error("Error fetching IP address:", error);
-                document.getElementById("ip-address").textContent = "Unable to retrieve IP address.";
+                console.error("Error fetching IP address:", error)
             })
     }
 
