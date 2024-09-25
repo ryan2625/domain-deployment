@@ -12,6 +12,15 @@ export const data = [
         first: true
     },
     {
+        image : './assets/images/parser.png',
+        alt: "Sha256.io Home Page",
+        title : "Sha256.io",
+        tech : ["jQuery", "CSS","HTML"],
+        description : "Originally designed to be an online phrase searcher using regex, this project has been repurposed into an online file hasher.",
+        link : "https://sha256-io.vercel.app/",
+        github : "https://github.com/ryan2625/regex-repo-searcher"
+    },
+    {
         image : './assets/images/salesSphere.webp',
         alt: "The home page of SalesSphere",
         title : "SalesSphere",
@@ -34,15 +43,6 @@ export const data = [
         github: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
         svg: "./assets/SVGs/dumbbell.svg",
         svgClass: "top-left"
-    },
-    {
-        image : './assets/images/parser.png',
-        alt: "Sha256.io Home Page",
-        title : "Sha256.io",
-        tech : ["jQuery", "CSS","HTML"],
-        description : "Originally designed to be an online phrase searcher using regex, this project has been repurposed into an online file hasher.",
-        link : "https://sha256-io.vercel.app/",
-        github : "https://github.com/ryan2625/regex-repo-searcher"
     },
     /*
     {

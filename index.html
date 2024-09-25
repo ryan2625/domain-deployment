@@ -14,13 +14,13 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta author="Ryan Freas">
-   <meta name="description" content="Ryan Freas // Full-stack developer // Chicago, IL">
+   <meta name="description" content="Ryan Freas is a software engineer, with a strong background in building web and mobile applications. His other interests include cybersecutity, weightlifting, and playing the violin.">
    <meta property="og:url" content="https://ryanfreas.com">
-   <meta property="og:site_name" content="Ryan Freas // Full-stack developer // Chicago, IL">
+   <meta property="og:site_name" content="Ryan Freas is a software engineer, with a strong background in building web and mobile applications. His other interests include cybersecutity, weightlifting, and playing the violin.">
    <meta property="og:type" content="website">
    <meta property="og:title" content="Ryan-Dev">
-   <meta property="og:image" content="https://ryanfreas.com/assets/individual-proj-images/crawler.webp">
-   <meta property="og:description" content="Ryan Freas // Full-stack developer // Chicago, IL">
+   <meta property="og:image" content="https://ryanfreas.com/assets/images/linkedPhoto4.webp">
+   <meta property="og:description" content="Ryan Freas is a software engineer, with a strong background in building web and mobile applications. His other interests include cybersecutity, weightlifting, and playing the violin.">
    <title>Ryan-Dev</title>
    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -148,24 +148,40 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
          <h2>Experience</h2>
          <div class="exper-row">
             <div class="left-exper">
-               <h3>Web Developer</h3>
-               <p class="company">Institute of Real Estate Management</p>
-               <p class="date">February 2024 - Present</p>
-               <p class="location">Chicago, IL</p>
-               <p class="tech-exper">C#, ASP.NET, SQL, jQuery, SASS</p>
+               <h3>Software Engineer</h3>
+               <p class="company">BlueTread</p>
+               <p class="date">October 2024 - Present</p>
+               <p class="location">Fort Myers, Florida</p>
+               <p class="tech-exper">React Native, TypeScript, SASS</p>
             </div>
             <div class="right-exper show-mobile first-exp">
-               <h3>Web Developer</h3>
-               <p class="company">Institute of Real Estate Management</p>
-               <p class="date">February 2024 - Present</p>
-               <p class="location">Chicago, IL</p>
-               <p class="tech-exper">C#, ASP.NET, SQL, jQuery, SASS</p>
+               <h3>Software Engineer</h3>
+               <p class="company">BlueTread</p>
+               <p class="date">October 2024 - Present</p>
+               <p class="location">Fort Myers, Florida</p>
+               <p class="tech-exper">React Native, TypeScript, SASS</p>
             </div>
          </div>
          <div class="exper-row">
             <div class="left-exper">
             </div>
             <div class="right-exper">
+               <h3>Web Developer</h3>
+               <p class="company">Institute of Real Estate Management</p>
+               <p class="date">February 2024 - October 2024</p>
+               <p class="location">Chicago, IL</p>
+               <p class="tech-exper">C#, ASP.NET, SQL, jQuery</p>
+            </div>
+         </div>
+         <div class="exper-row">
+            <div class="left-exper">
+               <h3>Frontend Web Developer</h3>
+               <p class="company">EDGE Center</p>
+               <p class="date">October 2022 - May 2023</p>
+               <p class="location">Quad Cities Metropolian Area</p>
+               <p class="tech-exper">HTML, CSS, JavaScript, Figma</p>
+            </div>
+            <div class="right-exper show-mobile">
                <h3>Frontend Web Developer</h3>
                <p class="company">EDGE Center</p>
                <p class="date">October 2022 - May 2023</p>
@@ -175,13 +191,8 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
          </div>
          <div class="exper-row">
             <div class="left-exper">
-               <h3>Treasurer, GDSC</h3>
-               <p class="company">Google Developer Student Clubs</p>
-               <p class="date">September 2022 - May 2023</p>
-               <p class="location">Rock Island, IL</p>
-               <p class="tech-exper">JavaScript, Python, Java</p>
             </div>
-            <div class="right-exper show-mobile">
+            <div class="right-exper">
                <h3>Treasurer, GDSC</h3>
                <p class="company">Google Developer Student Clubs</p>
                <p class="date">September 2022 - May 2023</p>
@@ -191,8 +202,13 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
          </div>
          <div class="exper-row">
             <div class="left-exper">
+               <h3>Computer Science, B.A.</h3>
+               <p class="company"> Augustana College</p>
+               <p class="date">August 2019 - May 2023</p>
+               <p class="location">Rock Island, IL</p>
+               <p class="tech-exper">OOP, Data Structures & Algorithms</p>
             </div>
-            <div class="early">
+            <div class="early show-mobile">
                <h3>Computer Science, B.A.</h3>
                <p class="company"> Augustana College</p>
                <p class="date">August 2019 - May 2023</p>
@@ -252,7 +268,7 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
       </div>
       <div class="footer">
          <p>
-            All rights reserved © 2024 Ryan Freas
+            All rights reserved © <span id="curr-year">2024</span> Ryan Freas
          </p>
          <ul>
             <li>
@@ -333,11 +349,11 @@ Hit me up -> https://www.linkedin.com/in/ryan-freas/ 🐬🐆
          window.scrollY(0)
       }
 
+      $("#curr-year").text(new Date().getFullYear())
    </script>
    <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
    </script>
    <script defer src="/_vercel/insights/script.js"></script>
 </body>
-
 </html>

@@ -115,7 +115,7 @@ $(document).ready(function () {
         buttons.append(a2)
 
         $(".portfolio-display").append(individual);
-        if (!element.hideBottom && element.title !== "Sha256.io") {
+        if (!element.hideBottom && element.title !== "Nighthawk Fitness") {
             $(".portfolio-display").append(divider);
         }
     });
