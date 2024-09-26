@@ -28,6 +28,7 @@ html{
     background-color: var(--scroll);
     border-radius: 10px;
   }
+  
 
   .dark_mode{
     --white:#fff;

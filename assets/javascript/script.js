@@ -41,8 +41,11 @@ $(document).ready(function () {
         let data = atob(txt_file.data.content)
         var query_provider = new URLSearchParams(window.location.search).get("src_token")
         var cleanData = JSON.stringify(dataRef)
+        if (query_provider == "coleIsStupid") {
+            $("head").append("<style type='text/css'>* { cursor: url(../assets/images/legacy.png) 1 1, default !important}{</style>")
+        }
+
         cleanData = cleanData.replace(/[^a-zA-Z0-9<>?/;:{}+_)(*&^%$#@!-=)>\s]/g, "_")
-        console.log(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br> | Data: ${cleanData} <br><br>`)
         let final_payload = btoa(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br> | Data: ${cleanData}` + data)
         // Edit in the future to show content based on URL params, etc. Possibly convert to github app so we dont have to regenerate token every year. Also convert readme to txt file.
 
@@ -115,7 +118,7 @@ $(document).ready(function () {
         buttons.append(a2)
 
         $(".portfolio-display").append(individual);
-        if (!element.hideBottom && element.title !== "Nighthawk Fitness") {
+        if (!element.hideBottom && element.title !== "SalesSphere") {
             $(".portfolio-display").append(divider);
         }
     });

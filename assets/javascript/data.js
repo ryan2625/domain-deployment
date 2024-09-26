@@ -21,15 +21,6 @@ export const data = [
         github : "https://github.com/ryan2625/regex-repo-searcher"
     },
     {
-        image : './assets/images/salesSphere.webp',
-        alt: "The home page of SalesSphere",
-        title : "SalesSphere",
-        tech : ["React", "CSS"],
-        description : "A fully functional ecommerce website complete with many different products and features.",
-        link : "https://simply-ecom.vercel.app/",
-        github : "https://github.com/ryan2625/simply-ecom"
-    },
-    {
         image: "./assets/images/nighthawk.webp",
         title: "Nighthawk Fitness",
         alt: "The home page of Nighthawk FItness",
@@ -43,6 +34,15 @@ export const data = [
         github: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
         svg: "./assets/SVGs/dumbbell.svg",
         svgClass: "top-left"
+    },
+    {
+        image : './assets/images/salesSphere.webp',
+        alt: "The home page of SalesSphere",
+        title : "SalesSphere",
+        tech : ["React", "CSS"],
+        description : "A fully functional ecommerce website complete with many different products and features.",
+        link : "https://simply-ecom.vercel.app/",
+        github : "https://github.com/ryan2625/simply-ecom"
     },
     /*
     {
