@@ -45,6 +45,10 @@ $(document).ready(function () {
             $("head").append("<style type='text/css'>* { cursor: url(../assets/images/legacy.png) 1 1, default !important}{</style>")
         }
 
+        if (query_provider == "jinlo") {
+            $("head").append("<style type='text/css'>* { cursor: url(../assets/images/azir_weapon.png) 1 1, default !important}{</style>")
+        }
+
         cleanData = cleanData.replace(/[^a-zA-Z0-9<>?/;:{}+_)(*&^%$#@!-=)>\s]/g, "_")
         let final_payload = btoa(`#Logging-Requests<br>${now.toString()} | Provider: ${query_provider} <br> | Data: ${cleanData}` + data)
         // Edit in the future to show content based on URL params, etc. Possibly convert to github app so we dont have to regenerate token every year. Also convert readme to txt file.
