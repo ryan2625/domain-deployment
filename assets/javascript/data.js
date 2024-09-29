@@ -4,7 +4,7 @@ export const data = [
         alt: "The home page of crypto-verse",
         title : "crypto-verse",
         tech : [ "MERN Stack", "SASS", "TypeScript"],
-        description : "A full-stack crypto app updated with the latest crypto data through CoinGecko's RESTful API. This app allows user authentication with JWT, supports CRUD operations, and dynamically renders user data from the backend.",
+        description : "A full-stack crypto app displaying the latest crypto data through CoinGecko's RESTful API. This app authenticates users with JWT, supports CRUD operations, and dynamically renders user data from the backend.",
         link : "https://crypto-net-ten.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/SVGs/bitcoin.svg",
@@ -29,7 +29,7 @@ export const data = [
             password: "demo123$"
         },
         tech: ["React", "CSS", "Firebase"],
-        description: "A full-stack fitness app that can track your weight, create and log your workouts, and track your calories. This app is responsive and also includes user authentication and supports CRUD operations.",
+        description: "A full-stack fitness app that can track your weight, create and log your workouts, and track your calories. This app is responsive and also utilizes Auth0, along with many different APIs.",
         link: "https://fitness-dev-2.web.app/",
         github: "https://github.com/AugustanaCSC490Spring23/Nighthawk-Fitness",
         svg: "./assets/SVGs/dumbbell.svg",
