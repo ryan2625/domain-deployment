@@ -13,13 +13,13 @@ jobs:
     
     steps:
       - name: Setup Repo
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
   
       - name: Install Dependencies
-      - run: npm install
+        run: npm install
   
       - name: Run JS Script to delete logs
-      - run: node assets/javascript/request.mjs
+        run: node assets/javascript/request.mjs
   
 
     
