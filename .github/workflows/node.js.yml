@@ -6,18 +6,19 @@ name: Node.js CI
 on:
   schedule:
     - cron: '0 0 1,15 * 1'
-
+  workflow_dispatch:
+    
 jobs:  
   clear-logs:
     runs-on: ubuntu-latest
-    
+        
     steps:
       - name: Setup Repo
         uses: actions/checkout@v4
-  
+        
       - name: Install Dependencies
         run: npm install
-  
+        
       - name: Run JS Script to delete logs
         run: node assets/javascript/request.mjs
-  
+        
