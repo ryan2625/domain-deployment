@@ -5,8 +5,10 @@ SVGs seen on the webpage. I used the javascript library [Kute](https://thednp.gi
 
 Tech used: HTML, JQuery, CSS
 
-Domain purchased via Hostinger.
+Domain Registrar: Hostinger
 
 ![Personal website](/assets/images/domain-light-mode.png)
 ![Personal website](/assets/images/domain-dark-mode1.png)
+
+A cron job clears the analytics logs for this website a few times a month (via the .yml files)
 <!--foundation.org/about /learning/publications-news/blog/irem-blogs/-->
