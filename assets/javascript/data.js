@@ -16,7 +16,7 @@ export const data = [
         alt: "Sha256.io Home Page",
         title : "Sha256.io",
         tech : ["jQuery", "CSS","HTML"],
-        description : "Originally designed to be an online phrase searcher using regex, this project has been repurposed into an online file hasher.",
+        description : "An online app that can generate a hash of any file you upload. Sha256, Sha512, and MD5 algorithms are available.",
         link : "https://sha256-io.vercel.app/",
         github : "https://github.com/ryan2625/regex-repo-searcher"
     },
