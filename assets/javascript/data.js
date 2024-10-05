@@ -4,7 +4,7 @@ export const data = [
         alt: "The home page of crypto-verse",
         title : "crypto-verse",
         tech : [ "MERN Stack", "SASS", "TypeScript"],
-        description : "A full-stack cryptocurrency app that displays real-time data using CoinGecko’s API. The app features JWT-based authentication and dynamically renders user data from a Node.js backend.",
+        description : "A full-stack cryptocurrency app that displays real-time data using CoinGecko’s API. The app features JWT-based authentication and dynamically renders user data from an Express.js backend.",
         link : "https://crypto-net-ten.vercel.app/",
         github : "https://github.com/ryan2625/crypto-net",
         svg: "./assets/SVGs/bitcoin.svg",
