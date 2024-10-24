@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.ryanfreas.com/sitemap.xml
