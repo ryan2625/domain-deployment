@@ -1,6 +1,6 @@
 # This workflow will do a clean installation of node dependencies, 
 # then run a JavaScript file to clear the logs of this website. 
-# Future updates to add more deatiled logs of this in progress.
+# Future updates to add more detailed logs of this in progress.
 
 name: Node.js CI
 
