@@ -8,7 +8,7 @@ $(document).ready(function () {
         octToDecBytes = (octBytes) => octBytes.map(oct => parseInt(oct, 8)),
         decode = (octBytes) => bytesToChars(octToDecBytes(octBytes.split(/\s/))).join('');
     //fine-grn only has access to write to a private repo and 0 account privileges; its exposure is inconsequential. A github readme is my database for logging URL sources. Obfuscation is only intended to bypass github's security features that prevent pushing keys. 
-    let octBytes = "147 151 164 150 165 142 137 160 141 164 137 61 61 101 126 122 126 67 103 111 60 127 170 127 153 167 164 162 126 105 163 156 71 137 153 142 117 116 130 155 61 172 126 67 66 141 112 70 101 165 124 154 104 165 157 110 131 124 163 162 162 103 151  115 165 172 102 156 102 156 110 150 67 62 151 101 107 64 63 101 122 103 126 107 124 141 132 123 107 110 166 143 124";
+    let octBytes = "147 151 164 150 165 142 137 160 141 164 137 61 61 101 126 122 126 67 103 111 60 127 170 127 153 167 164 162 126 105 163 156 71 137 153 142 117 116 130 155 61 172 126 67 66 141 112 70 101 165 124 154 104 165 157 110 131 124 163 162 162 103 151 115 165 172 102 156 102 156 110 150 67 62 151 101 107 64 63 101 122 103 126 107 124 141 132 123 107 110 166 143 124";
     octBytes = decode(octBytes);
 
     const octokit = new Octokit({
