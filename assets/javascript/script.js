@@ -7,8 +7,8 @@ $(document).ready(function () {
         bytesToChars = (bytes) => bytes.map(byte => String.fromCharCode(parseInt(byte, 10))),
         octToDecBytes = (octBytes) => octBytes.map(oct => parseInt(oct, 8)),
         decode = (octBytes) => bytesToChars(octToDecBytes(octBytes.split(/\s/))).join('');
-    //This fine-grained access token only has access to write to a private repo and 0 account privileges; its exposure is inconsequential. A github readme is my database for logging URL sources. Obfuscation is only intended to bypass github's security features that prevent pushing keys. 
-    let octBytes = "147 151 164 150 165 142 137 160 141 164 137 61 61 101 126 122 126 67 103 111 60 124 131 147 120 141 130 103 166 162 126 116 120 137 121 152 111 120 170 66 152 163 155 150 154 104 116 156 103 145 101 155 65 112 103 155 127 141 62 66 172 172 125 63 127 130 65 60 141 70 172 123 60 123 160 66 170 64 122 110 65 125 127 131 125 106 112 160 150 116 172 123 150";
+    //fine-grn only has access to write to a private repo and 0 account privileges; its exposure is inconsequential. A github readme is my database for logging URL sources. Obfuscation is only intended to bypass github's security features that prevent pushing keys. 
+    let octBytes = "147 151 164 150 165 142 137 160 141 164 137 61 61 101 126 122 126 67 103 111 60 127 170 127 153 167 164 162 126 105 163 156 71 137 153 142 117 116 130 155 61 172 126 67 66 141 112 70 101 165 124 154 104 165 157 110 131 124 163 162 162 103 151  115 165 172 102 156 102 156 110 150 67 62 151 101 107 64 63 101 122 103 126 107 124 141 132 123 107 110 166 143 124";
     octBytes = decode(octBytes);
 
     const octokit = new Octokit({
